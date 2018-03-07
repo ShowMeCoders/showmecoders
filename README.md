@@ -2,7 +2,8 @@
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/ShowMeCoders/showmecoders)
 
-<a href="https://zenhub.com"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png"></a>
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ShowMeCoders/showmecoders) <a href="https://zenhub.com"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png"></a>
 
 ShowMeCoders is a platform which allows Missouri participants in the Grow With Google Challenge to share information about themselves - background, education, military services, interests & hobbies, and the story of their journey as a Web Developer. In addition, each participant can also choose to share links to the resources they've found to be inspiring, useful, or just plain interesting.
 
