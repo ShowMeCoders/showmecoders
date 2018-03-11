@@ -1,0 +1,135 @@
+/* Found this trick (in HTML tag below) to set BG to always cover and stay fixed on CSS Tricks: https://css-tricks.com/perfect-full-page-background-image/  */
+
+html {
+  background: url("https://raw.githubusercontent.com/ShowMeCoders/showmecoders/development/assets/SMC_BG.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+  font-family: 'Roboto',Tahoma,Verdana,sans-serif;
+  margin: 175px 0 50px 0;
+}
+
+#contentContainer {
+  margin: 0 10px 0 10px;
+}
+
+#smcLogo {
+  width: 30%;
+  min-width: 300px;
+  height: auto;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 2px;
+  background: #0062c1;
+  border-bottom: 2px solid #f4564b;
+  border-top: 2px solid #f4564b;
+  box-shadow: 0 0.5px 15px 2px #000;
+  text-align: center;
+  color: #ffffff;
+  z-index: 9999;
+}
+
+.navbar {
+  overflow: hidden;
+  padding: 5px;
+}
+
+.navbar a{
+  font-size: 16px;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #f4564b;
+}
+
+.devBoxLeft {
+  display: flex;
+  align-items: center;
+  background: radial-gradient(#188ff4, #0062c1);
+  width: 30%;
+  min-width: 450px;
+  height: 175px;
+  border-radius: 15px;
+  border: 2px solid #000;
+  box-shadow: 2px 3px 8px 1px #A9A9A9;
+  margin: 0 50% 20px 18%;
+}
+.devBoxRight {
+  display: flex;
+  align-items: center;
+  background: radial-gradient(#188ff4, #0062c1);
+  width: 30%;
+  min-width: 450px;
+  height: 175px;
+  border-radius: 15px;
+  border: 2px solid #000;
+  box-shadow: 2px 3px 8px 1px #A9A9A9;
+  margin: 0 20% 20px 52%;
+}
+
+.devNameBox {
+  background-color: #000;
+  height: 179px;
+  width: 40px;
+  margin: 0 12px 0 0;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.devName {
+  position: relative;
+  top: 110px;
+  transform: rotate(-90deg);
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.devPic {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 6px 1px #000;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.devInfo {
+  align-self: flex-start;
+  width: 45%;
+  min-width: 200px;
+  font-size: 20px;
+}
+
+.devInfoListItems {
+  font-weight: bold;
+}
+
+/* Original Footer idea from @cbracco https://codepen.io/cbracco/pen/zekgx?q=footer&limit=all&type=type-pens */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 25px;
+  width: 100%;
+  padding-top: 2px;
+  background-color: #0062c1;
+  box-shadow: -1px 0 5px 1px #000;
+  border-top: 2px solid #f4564b;
+  color: #fff;
+  text-align: center;
+}
