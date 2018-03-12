@@ -6,7 +6,7 @@ body{
   margin: 0px;
   padding: 170px 0 0 0;
   font-family: 'Roboto',Tahoma,Verdana,sans-serif;
-  background: url('https://raw.githubusercontent.com/ShowMeCoders/showmecoders/development/assets/SMC_BG.png') fixed no-repeat;
+  background: url('https://raw.githubusercontent.com/ShowMeCoders/showmecoders/development/assets/SMC_BG2.png') fixed no-repeat;
   opacity: 0.8;
   background-position: center; 
   background-size: cover;
@@ -254,7 +254,7 @@ div.portfolio2 {
         <a href="/inspiration">Inspiration</a>
     </div>
 
-<ul><li class="menuButton"><img src="file:///Users/Nick/Desktop/ShowMeCoders/images/ic_menu_black_24px.svg">
+<ul><li class="menuButton"><img src="https://raw.githubusercontent.com/ShowMeCoders/showmecoders/development/assets/ic_menu_black_24px.svg">
             <ul class="menuItems">
                 <li>Blog</li>
                 <li>Forum</li>
