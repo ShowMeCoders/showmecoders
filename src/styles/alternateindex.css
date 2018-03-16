@@ -4,9 +4,9 @@
 
 body{
   margin: 0px;
-  padding: 170px 0 0 0;
+  padding: 60px 0 0 0;
   font-family: 'Roboto',Tahoma,Verdana,sans-serif;
-  background: url('https://raw.githubusercontent.com/ShowMeCoders/showmecoders/development/assets/SMC_BG2.png') fixed no-repeat;
+  background: url('https://raw.githubusercontent.com/ShowMeCoders/showmecoders/development/assets/SMC_BG.png') fixed no-repeat;
   opacity: 0.8;
   background-position: center; 
   background-size: cover;
@@ -83,8 +83,8 @@ padding: 25px;
 div.portfolio2 {
   background: radial-gradient(#6bbfff,#188ff4);
   border: 0em;
-  padding: 25px 5% 25px 5%;
-  margin-bottom: 10px;
+  padding: 25px 5%;
+  margin-bottom: 25px;
   width: 100%;
   }
 
@@ -203,6 +203,7 @@ div.portfolio2 {
  border: 2px solid #000;
  box-shadow: 2px 3px 8px 1px #A9A9A9;
  margin: auto;
+ margin-bottom: 25px;
 }
  
  .devNameBox {
@@ -245,27 +246,3 @@ div.portfolio2 {
  .devInfoListItems {
    font-weight: bold;
  }
-
-
- /* <div class="navbar">
-
-        <a href="/blog">Blog</a>
-        <a href="/forum">Forum</a>
-        <a href="/inspiration">Inspiration</a>
-    </div>
-
-<ul><li class="menuButton"><img src="https://raw.githubusercontent.com/ShowMeCoders/showmecoders/development/assets/menuIcon.png">
-            <ul class="menuItems">
-                <li>Blog</li>
-                <li>Forum</li>
-                <li>Inspiration</li>
-            </ul>
-        </li></ul>
-
-
-
-
-
-
-
-</div> */
