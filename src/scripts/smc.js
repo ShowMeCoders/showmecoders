@@ -14,3 +14,11 @@ window.onclick=function(event) {
         }
     }
 }
+
+$(window).resize(function() {
+    if ($(this).width() < 800) {
+      $('.props').hide();
+    } else {
+      $('.props').show();
+    }
+});
