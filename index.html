@@ -4,36 +4,50 @@
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
 <!--INSERT CSS-->
-<link rel="stylesheet" type="text/css" href="../Individual/style/templateHome.css">
+  <link rel="stylesheet" type="text/css" href="./styles/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+  <link rel="stylesheet" href="github-activity-0.1.5.min.css">
 
-<!--INSERT jQUERY-->
+<!--INSERT SCRIPTS-->
+    <script type="text/javascript" src="./scripts/smc.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+  <script type="text/javascript" src="github-activity-0.1.5.min.js"></script>
 
-<!--INSERT OTHER SCRIPTS-->
 
 </head>
 
 <body>
 
- <div id="header">
-    <a href="http://showmecoders.zyphyrmedia.org" title="Show Me Coders"><img class="banner" src="https://raw.githubusercontent.com/ShowMeCoders/showmecoders/development/assets/showmecoders-logo1-white.png" alt="Show-Me Coders" id="smcLogo"></a><br>
-    A showcase of skills learned in conjunction with  <a href="http://www.udacity.com" title="Udacity"><img src="https://raw.githubusercontent.com/ShowMeCoders/showmecoders/development/assets/udacity.png" height="15px"></a>  and  <a href="http://grow.google" title="Grow with Google"><img src="https://raw.githubusercontent.com/ShowMeCoders/showmecoders/development/assets/gwg.png" height="15px"></a>
+<div id="header">
 
-    <div class="navbar">
-        <a href="/blog">Blog</a>
-        <a href="/forum">Forum</a>
-        <a href="/inspiration">Inspiration</a>
+
+    <div class="props"><p>A showcase of skills learned in conjunction<br>with  <a href="http://www.udacity.com" title="Udacity" style="vertical-align:bottom"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/udacity.png?raw=true" height="15px"></a>  and  <a href="http://grow.google" title="Grow with Google"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/gwg.png?raw=true" height="15px" style="vertical-align:middle"></a></div>
+
+    <div class="banner">
+            <a href="http://showmecoders.zyphyrmedia.org" title="Show Me Coders"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/showmecoders-logo1-white.png?raw=true" alt="Show-Me Coders"></a>
     </div>
 
- </div>
+    <div class="menu">
+        <button onclick="headerMenu()" class="menuButton"><img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRo%0D%0APSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0w%0D%0AIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4KICAgIDxwYXRoIGQ9Ik0zIDE4aDE4di0ySDN2Mnpt%0D%0AMC01aDE4di0ySDN2MnptMC03djJoMThWNkgzeiIvPgo8L3N2Zz4="></button>
+        <div id="menuOptions" class="menuContent">
+            <a href="/../blog.html">Blog</a>
+            <a href="/../forum.html">Forum</a>
+            <a href="/../inspiration.html">Inspiration</a>
+        </div>
 
- <!-- Addes margin for main content  -->
+    </div>
 
- <div id="contentContainer">
 
+</div>
+
+ <div class="contDEVs">Contributing Developers:</div>
 <!-- DEV Boxes  -->
 
-  <div class="devBoxLeft devBox">
+ <div class="devRows">
+
+  <div class="devBox">
    <div class="devNameBox">
       <h3 class="devName">Jim</h3>
    </div>
@@ -44,7 +58,19 @@
       <li><span class="devInfoListItems">Bio:</span> Experienced IT professional</li>
   </div>
 
-  <div class="devBoxRight devBox">
+
+  <div class="devBox">
+   <div class="devNameBox">
+      <h3 class="devName">Xaviera</h3>
+   </div>
+    <img src="https://avatars2.githubusercontent.com/u/32984629?s=400&v=4" alt="Xaviera" class="devPic">
+    <ul class="devInfo">
+      <li><span class="devInfoListItems">GitHub:</span> xvasser</li>
+      <li><span class="devInfoListItems">Location:</span> Collinsville, IL</li>
+      <li><span class="devInfoListItems">Bio:</span> DEV'nately going to impress with my Front-End DEV skills.</li>
+  </div>
+
+  <div class="devBox">
    <div class="devNameBox">
       <h3 class="devName">Eric</h3>
    </div>
@@ -55,7 +81,7 @@
       <li><span class="devInfoListItems">Bio:</span> I'm NEW, but working on it...</li>
   </div>
 
-  <div class="devBoxLeft devBox">
+  <div class="devBox">
    <div class="devNameBox">
       <h3 class="devName">Nick</h3>
    </div>
@@ -66,7 +92,7 @@
       <li><span class="devInfoListItems">Bio:</span> Former politico and aspiring developer.</li>
   </div>
 
-      <div class="devBoxRight devBox">
+  <div class="devBox">
    <div class="devNameBox">
       <h3 class="devName">Marcy</h3>
    </div>
@@ -77,7 +103,18 @@
       <li><span class="devInfoListItems">Bio:</span> Software Developer</li>
   </div>
 
-  <div class="devBoxLeft devBox">
+  <div class="devBox">
+   <div class="devNameBox">
+      <h3 class="devName">Kyle</h3>
+   </div>
+    <img src="https://avatars3.githubusercontent.com/u/19237299?s=400&v=4" alt="Kyle G" class="devPic">
+    <ul class="devInfo">
+      <li><span class="devInfoListItems">GitHub:</span> kylegeary</li>
+      <li><span class="devInfoListItems">Location:</span> USA</li>
+      <li><span class="devInfoListItems">Bio:</span> Web application manager and front-end developer</li>
+  </div>
+
+  <div class="devBox">
    <div class="devNameBox">
       <h3 class="devName">Bruce</h3>
    </div>
@@ -88,10 +125,59 @@
       <li><span class="devInfoListItems">Bio:</span> Admin.</li>
   </div>
 
+  <div class="devBox">
+   <div class="devNameBox">
+      <h3 class="devName">Keith</h3>
+   </div>
+    <img src="https://avatars2.githubusercontent.com/u/26677177?s=400&v=4" alt="Keith" class="devPic">
+    <ul class="devInfo">
+      <li><span class="devInfoListItems">GitHub:</span> keithneemann</li>
+      <li><span class="devInfoListItems">Location:</span> MO</li>
+      <li><span class="devInfoListItems">Bio:</span> Gonna be a Husker again!</li>
+  </div>
+
+  <div class="devBox">
+   <div class="devNameBox">
+      <h3 class="devName">Cole</h3>
+   </div>
+    <img src="https://avatars1.githubusercontent.com/u/18541094?s=400&v=4" alt="Cole" class="devPic">
+    <ul class="devInfo">
+      <li><span class="devInfoListItems">GitHub:</span> hellmaca</li>
+      <li><span class="devInfoListItems">Location:</span> St. Louis, MO</li>
+      <li><span class="devInfoListItems">Bio:</span> I am a developer transitioning to a career in tech.</li>
+  </div>
+
+  <div class="devBox">
+   <div class="devNameBox">
+      <h3 class="devName">Kodi</h3>
+   </div>
+    <img src="https://avatars2.githubusercontent.com/u/13407811?s=400&v=4" alt="Kodi" class="devPic">
+    <ul class="devInfo">
+      <li><span class="devInfoListItems">GitHub:</span> K-Watt</li>
+      <li><span class="devInfoListItems">Location:</span> SEMO</li>
+      <li><span class="devInfoListItems">Bio:</span> Studying Computer Science, DEV'ing on the side!</li>
+  </div>
+
+  <div class="devBox">
+   <div class="devNameBox">
+      <h3 class="devName">Rajesh</h3>
+   </div>
+    <img src="https://avatars2.githubusercontent.com/u/13407811?s=400&v=4" alt="RJ" class="devPic">
+    <ul class="devInfo">
+      <li><span class="devInfoListItems">GitHub:</span> [Unknown]</li>
+      <li><span class="devInfoListItems">Location:</span> Topeka, KS</li>
+      <li><span class="devInfoListItems">Bio:</span> Moving from Back-End to Front-End DEV.</li>
+  </div>
+
+ </div>
+
 <!-- End DEV Boxes -->
 
- </div> <!-- Closes "contentContainer" div -->
+<!-- GH Feed -->
+    <div id="feed"></div>
 
+
+<!-- Footer -->
   <div class="footer"><strong>Copyright 2018 -</strong> Show-Me Coders</div>
 
 </body>
