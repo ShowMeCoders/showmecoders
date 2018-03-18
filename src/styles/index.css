@@ -129,7 +129,8 @@ div.menu img {
 .contDEVs {
   width: 100%;
   height: auto;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-bottom: 40px;
   opacity: 0.8;
   border-bottom: 2px solid #ddd;
