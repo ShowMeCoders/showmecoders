@@ -123,13 +123,15 @@ div.menu img {
 
 /* Personalized Code */
 
-#body {
+#contentBody {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
+
+/* DEV Info Box */
 
 .zDEV {
   display: flex;
@@ -169,11 +171,7 @@ div.menu img {
   box-shadow: 1px 1px 6px 1px #000;
 }
 
-ul{
-  list-style-type: none;
-}
-
-li {
+.devBoxList {
   margin-bottom: 5px;
 }
 
@@ -181,41 +179,71 @@ li {
   align-self: flex-start;
   width: 200px;
   font-size: 18px;
+  list-style-type: none;
 }
 
 .devInfoListItems {
   font-weight: bold;
 }
 
-div.portfolio {
-background: radial-gradient(#6bbfff,#188ff4);
-border: 0em;
-border-radius: 10px;
-margin: 25px;
-padding: 25px;
+/* Main Content */
+
+/* Page Layout */
+
+#devContentArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-div.portfolio2 {
-  background: radial-gradient(#6bbfff,#188ff4);
-  border: 0em;
-  padding: 25px 5%;
+#contentLeft {
+  opacity: 0.6;
+  width: 300px;
+  height: 800px;
+  margin: 20px;
+  background-color: #A9A9A9;
+  border-radius: 12px;
+  box-shadow: 5px 5px 12px 1px #0062c1;
+}
+
+#contentRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   margin-bottom: 25px;
-  width: 100%;
-  }
-
-#bio {
-  background: radial-gradient(#ff8977,#f4564b);
-  border: 0em;
-  border-radius: 10px;
-  margin: 25px;
-  padding: 25px;
+  width: 800px;
+  height: auto;
 }
 
-#bio2 {
-  background: radial-gradient(#ff8977,#f4564b);
-  border: 0em;
-  padding: 25px 5% 25px 5%;
-  width: 100%;
+.conRightOne {
+  width: 90%;
+  height: 500px;
+  margin: 20px;
+  background-color: #A9A9A999;
+  border-radius: 12px;
+  box-shadow: 5px 5px 12px 1px #0062c1;
+}
+
+.conRightTwo {
+  opacity: 0.6;
+  width: 90%;
+  height: 500px;
+  margin: 20px;
+  background-color: #A9A9A999;
+  border-radius: 12px;
+  box-shadow: 5px 5px 12px 1px #0062c1;
+}
+
+/* Element Styling */
+
+.elementTitle {
+  font-size: 15px;
+  color: #f4564b;
+  padding-bottom: 2px;
+  box-shadow: 0 1px 0 0 #000;
 }
 
 
