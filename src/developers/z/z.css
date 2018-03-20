@@ -11,6 +11,12 @@ body{
   background-size: cover;
   background-color: #ffffff;
 }
+
+/* Oversizing catch-all */
+img, embed, object, video {
+  max-width: 100%;
+}
+
 /* HEADER & MENU */
 
 #header {
