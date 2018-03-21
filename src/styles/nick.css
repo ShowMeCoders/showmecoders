@@ -3,8 +3,8 @@
 
 /* HEADER/FOOTER/BODY BASIC ITEMS */
 
-html {
-  background: url("../../assets/SMC_BG.png") no-repeat center center fixed;
+#landing {
+  background: url("../../src/developers/nick/images/BG_ocean.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
