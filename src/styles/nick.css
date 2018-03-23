@@ -3,12 +3,28 @@
 
 /* HEADER/FOOTER/BODY BASIC ITEMS */
 
-#landing {
-  background: url("../../src/developers/nick/images/BG_ocean.jpg") no-repeat center center fixed;
+html {
+  background: #ffffff; no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+#personalHeader {
+  background: #f0f0f0;
+  display: inline;
+}
+
+#personalHeader img {
+  float: left;
+  display: inline;
+}
+
+h1 {
+  font-size: 20pt;
+  font-weight: bold;
+  text-align: center;
 }
 
 body{
