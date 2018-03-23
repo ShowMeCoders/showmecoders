@@ -17,6 +17,24 @@ img, embed, object, video {
   max-width: 100%;
 }
 
+/* Remove underline from links */
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
 /* HEADER & MENU */
 
 #header {
@@ -141,61 +159,7 @@ div.menu img {
   margin-bottom: 75px;
 }
 
-/* DEV Info Box */
-
-.zDEV {
-  display: flex;
-  align-items: center;
-  background: radial-gradient(#188ff4, #0062c1);
-  width: 90%;
-  max-width: 450px;
-  height: 145px;
-  margin-bottom: 25px;
-  border-radius: 15px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.devNameBox {
-  background-color: #000;
-  height: 145px;
-  width: 35px;
-  margin: 0 10px 0 0;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
-
-.devName {
-  position: relative;
-  top: 88px;
-  transform: rotate(-90deg);
-  color: #fff;
-  font-size: 20px;
-  letter-spacing: 2px;
-}
-
-.devPic {
-  width: 125px;
-  height: 125px;
-  border-radius: 5px;
-  border: 1px solid #000;
-  box-shadow: 1px 1px 6px 1px #000;
-}
-
-.devInfo {
-  align-self: flex-start;
-  width: 100%;
-  font-size: 18px;
-  list-style-type: none;
-  margin-left: -25px;
-}
-
-.devBoxList {
-  margin-bottom: 5px;
-}
-
-.devInfoListItems {
-  font-weight: bold;
-}
+/* DEV Info */
 
 .zInfo {
   display: flex;
@@ -205,19 +169,34 @@ div.menu img {
   align-content: space-around;
   width: 100%;
   max-width: 300px;
-  margin: 20px;
+  margin: 25px;
+}
+
+.devPic {
+  width: 125px;
+  height: 125px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 6px 1px #188ff4;
 }
 
 .connect {
   font-size: 14px;
-  color: #fff;
+  color: #000;
+  background-color: #fff;
+  box-shadow: 1px 1px 12px #188ff4;
+  padding: 5px;
+  margin: 12px;
+  opacity: 0.8;
 }
 
 .logos {
-  align-self: flex-end;
-  width: 30px;
-  height: 30px;
-
+  align-self: space-around;
+  background-color: #ffffff2f;
+  box-shadow: 1px 1px 12px #188ff4;
+  width: 35px;
+  height: 35px;
+  padding: 8px;
 }
 
 
@@ -236,27 +215,29 @@ div.menu img {
 
 .blueBox {
   width: 100%;
+  max-width: 100%;
   height: 300px;
-  margin-bottom: 10px;
+  margin-bottom: 35px;
   background-color: #ffffff3f;
-  border-radius: 0 12px 0 12px;
-  border-top: 8px solid #6bbfff;
-  border-bottom: 3px solid #ffffffaa;
+  border-radius: 0 0 12px 0;
+  box-shadow: 0 1px 6px #188ff4;
 }
 
 .redBox {
   width: 100%;
+  max-width: 100%;
   height: 300px;
-  margin-bottom: 10px;
+  margin-bottom: 35px;
   background-color: #ffffff3f;
-  border-radius: 12px 0 12px 0;
-  border-top: 8px solid #ff8977;
-  border-bottom: 3px solid #ffffffaa;
+  border-radius: 0 0 12px 0;
+  box-shadow: 0 1px 6px #ff8977;
 }
 
-.boxContent {
+.boxHeading {
   width: 100%;
-
+  margin: 0;
+  padding: 3px 0 3px 0;
+  background-color: #ffffffaa;
   color: #000;
 }
 
