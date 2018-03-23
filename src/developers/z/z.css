@@ -4,7 +4,7 @@
 
 body{
   margin: 0px;
-  padding: 60px 0 0 0;
+  max-width: 100%;
   font-family: 'Roboto',Tahoma,Verdana,sans-serif;
   background: url('https://raw.githubusercontent.com/ShowMeCoders/showmecoders/development/assets/SMC_BG.png') fixed no-repeat;
   background-position: center;
@@ -23,6 +23,7 @@ img, embed, object, video {
   position: fixed;
   top: 0;
   width: 100%;
+  max-width: 100%;
   background: radial-gradient(#188ff4,#0062c1);
   text-align: center;
   font-size: 12px;
@@ -135,6 +136,9 @@ div.menu img {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
+  margin-top: 75px;
+  margin-bottom: 75px;
 }
 
 /* DEV Info Box */
@@ -143,26 +147,26 @@ div.menu img {
   display: flex;
   align-items: center;
   background: radial-gradient(#188ff4, #0062c1);
-  width: 475px;
-  min-width: 400px;
-  height: 175px;
-  margin: 0 20px 40px 20px;
+  width: 90%;
+  max-width: 450px;
+  height: 145px;
+  margin-bottom: 25px;
   border-radius: 15px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .devNameBox {
   background-color: #000;
-  height: 175px;
-  width: 40px;
-  margin: 0 12px 0 0;
+  height: 145px;
+  width: 35px;
+  margin: 0 10px 0 0;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 
 .devName {
   position: relative;
-  top: 108px;
+  top: 88px;
   transform: rotate(-90deg);
   color: #fff;
   font-size: 20px;
@@ -170,29 +174,29 @@ div.menu img {
 }
 
 .devPic {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   border-radius: 5px;
   border: 1px solid #000;
   box-shadow: 1px 1px 6px 1px #000;
+}
+
+.devInfo {
+  align-self: flex-start;
+  width: 100%;
+  font-size: 18px;
+  list-style-type: none;
+  margin-left: -25px;
 }
 
 .devBoxList {
   margin-bottom: 5px;
 }
 
-.devInfo {
-  align-self: flex-start;
-  width: 200px;
-  font-size: 18px;
-  list-style-type: none;
-}
-
 .devInfoListItems {
   font-weight: bold;
 }
 
-/* Main Content */
 
 /* Page Layout */
 
@@ -202,54 +206,35 @@ div.menu img {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
+  width: 100%;
 }
 
-#contentLeft {
-  opacity: 0.6;
-  width: 300px;
-  height: 800px;
-  margin: 20px;
-  background-color: #A9A9A9;
-  border-radius: 12px;
-  box-shadow: 5px 5px 12px 1px #0062c1;
+/* Main Content */
+
+.blueBox {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+  background-color: #ffffff3f;
+  border-radius: 0 12px 0 12px;
+  border-top: 8px solid #6bbfff;
+  border-bottom: 3px solid #ffffffaa;
 }
 
-#contentRight {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 25px;
-  width: 800px;
-  height: auto;
+.redBox {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+  background-color: #ffffff3f;
+  border-radius: 12px 0 12px 0;
+  border-top: 8px solid #ff8977;
+  border-bottom: 3px solid #ffffffaa;
 }
 
-.conRightOne {
-  width: 90%;
-  height: 500px;
-  margin: 20px;
-  background-color: #A9A9A999;
-  border-radius: 12px;
-  box-shadow: 5px 5px 12px 1px #0062c1;
-}
+.boxContent {
+  width: 100%;
 
-.conRightTwo {
-  opacity: 0.6;
-  width: 90%;
-  height: 500px;
-  margin: 20px;
-  background-color: #A9A9A999;
-  border-radius: 12px;
-  box-shadow: 5px 5px 12px 1px #0062c1;
-}
-
-/* Element Styling */
-
-.elementTitle {
-  font-size: 15px;
-  color: #f4564b;
-  padding-bottom: 2px;
-  box-shadow: 0 1px 0 0 #000;
+  color: #000;
 }
 
 
