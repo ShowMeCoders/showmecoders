@@ -197,6 +197,29 @@ div.menu img {
   font-weight: bold;
 }
 
+.zInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px;
+}
+
+.connect {
+  font-size: 14px;
+  color: #fff;
+}
+
+.logos {
+  align-self: flex-end;
+  width: 30px;
+  height: 30px;
+
+}
+
 
 /* Page Layout */
 
