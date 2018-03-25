@@ -38,7 +38,8 @@ a:active {
 
 #header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
   max-width: 100%;
   background: radial-gradient(#188ff4,#0062c1);
@@ -46,9 +47,8 @@ a:active {
   font-size: 12px;
   color: #ffffff;
   z-index: 1;
-  vertical-align: middle;
-  height: 50px;
-  display: inline-block;
+  height: 40px;
+  padding: 3px 0 3px 0;
 }
 
 #header p {
@@ -60,9 +60,8 @@ a:active {
 }
 
 .banner {
-  height: 45px;
   vertical-align: middle;
-  margin: 2px;
+  margin: 5px;
   max-width: 50%;
   display: inline;
 }
@@ -81,10 +80,6 @@ a:active {
 
 .menu {
   height: inherit;
-  float: right;
-  top: 0;
-  display: inline-block;
-  position: relative;
 }
 
 .menu img {
@@ -154,7 +149,7 @@ a:active {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 15px;
   margin-bottom: 75px;
 }
 

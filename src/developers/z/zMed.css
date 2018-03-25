@@ -38,8 +38,7 @@ a:active {
 
 #header {
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
   width: 100%;
   max-width: 100%;
@@ -49,24 +48,34 @@ a:active {
   color: #ffffff;
   z-index: 1;
   height: 50px;
+  padding: 3px 0 3px 0;
+}
+
+#header p {
+  vertical-align: middle;
+}
+
+#header a {
+  vertical-align: middle;
 }
 
 .banner {
-  height: 45px;
-  margin: 0;
+  vertical-align: middle;
+  margin: 5px;
   max-width: 50%;
-}
-
-.props {
-  display: none;
-  margin-left: 10px;
-  max-width: 30%;
+  display: inline;
 }
 
 .banner img {
   max-width: 100%;
   max-height: 100%;
-  margin: 0;
+}
+
+.props {
+  display: none;
+  float: left;
+  margin-left: 10px;
+  max-width: 30%;
 }
 
 .menu {
@@ -140,7 +149,7 @@ a:active {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 75px;
+  margin-top: 20px;
   margin-bottom: 75px;
 }
 
