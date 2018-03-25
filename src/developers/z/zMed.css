@@ -37,8 +37,10 @@ a:active {
 /* HEADER & MENU */
 
 #header {
-  position: fixed;
-  top: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 100%;
   background: radial-gradient(#188ff4,#0062c1);
@@ -46,45 +48,29 @@ a:active {
   font-size: 12px;
   color: #ffffff;
   z-index: 1;
-  vertical-align: middle;
   height: 50px;
-  display: inline-block;
-}
-
-#header p {
-  vertical-align: middle;
-}
-
-#header a {
-  vertical-align: middle;
 }
 
 .banner {
   height: 45px;
-  vertical-align: middle;
-  margin: 2px;
+  margin: 0;
   max-width: 50%;
-  display: inline;
+}
+
+.props {
+  display: none;
+  margin-left: 10px;
+  max-width: 30%;
 }
 
 .banner img {
   max-width: 100%;
   max-height: 100%;
-}
-
-.props {
-  display: none;
-  float: left;
-  margin-left: 10px;
-  max-width: 30%;
+  margin: 0;
 }
 
 .menu {
   height: inherit;
-  float: right;
-  top: 0;
-  display: inline-block;
-  position: relative;
 }
 
 .menu img {

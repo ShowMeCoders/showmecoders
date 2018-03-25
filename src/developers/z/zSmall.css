@@ -37,8 +37,8 @@ a:active {
 /* HEADER & MENU */
 
 #header {
-  position: fixed;
-  top: 0;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   max-width: 100%;
   background: radial-gradient(#188ff4,#0062c1);
@@ -257,6 +257,7 @@ a:active {
 .content {
   width: 95%;
   margin: 10px;
+  padding-bottom: 10px;
   font-size: 16px;
   font-family: Roboto;
   color: #000;
