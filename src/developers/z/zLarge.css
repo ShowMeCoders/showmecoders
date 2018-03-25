@@ -1,0 +1,273 @@
+
+/*BODY ATTRIBUTE SELECTORS */
+
+body{
+  margin: 0px;
+  max-width: 100%;
+  font-family: "Roboto",Tahoma,Verdana,sans-serif;
+  background: url('https://raw.githubusercontent.com/ShowMeCoders/showmecoders/development/assets/SMC_BG.png') fixed no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #ffffff;
+}
+
+/* Oversizing catch-all */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+/* Remove underline from links */
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+/* HEADER & MENU */
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  background: radial-gradient(#188ff4,#0062c1);
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+  z-index: 1;
+  vertical-align: middle;
+  height: 50px;
+  display: inline-block;
+}
+
+#header p {
+  vertical-align: middle;
+}
+
+#header a {
+  vertical-align: middle;
+}
+
+.banner {
+  height: 45px;
+  vertical-align: middle;
+  margin: 2px;
+  max-width: 50%;
+  display: inline;
+}
+
+.banner img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.props {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  max-width: 30%;
+}
+
+.menu {
+  height: inherit;
+  float: right;
+  top: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.menu img {
+  height: 60%;
+  filter: brightness(0) invert(1);
+}
+
+.menuButton {
+  height: inherit;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: inherit;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.menuButton:hover, .menuButton:focus {
+  background-color: #e9e9e9;
+}
+
+.menuContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0;
+}
+
+.menuContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.menuContent a:hover {
+  background-color: #f4564b;
+}
+
+.show {display: block;}
+
+.navbar {
+  overflow: hidden;
+  padding: 10px;
+}
+
+.navbar a{
+  font-size: 16px;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #f4564b;
+}
+
+/* MAIN CONTENT */
+
+#contentBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+/* DEV Info */
+
+.zInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+  width: 100%;
+  max-width: 300px;
+  margin: 25px;
+}
+
+.devPic {
+  width: 125px;
+  height: 125px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 6px 1px #188ff4;
+}
+
+.connect {
+  text-align: center;
+  font-size: 18px;
+  font-family: Roboto;
+  color: #000;
+  background-color: #fff;
+  box-shadow: 1px 1px 15px #188ff4;
+  padding: 5px;
+  margin: 12px;
+  opacity: 0.8;
+}
+
+.logoBox {
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  margin-bottom: 10px;
+}
+
+.logos {
+  background-color: #ffffff2f;
+  box-shadow: 1px 1px 15px #188ff4;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+/* Page Layout */
+
+#devContentArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+  background-color: #ffffffe4;
+}
+
+/* Main Content */
+
+.blueBox {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  padding-bottom: 10px;
+  box-shadow: 0 -2px 5px #188ff4;
+}
+
+.redBox {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  padding-bottom: 10px;
+  box-shadow: 0 -2px 5px #ff8977;
+}
+
+.boxHeading {
+  width: 100%;
+  margin: 0;
+  padding: 3px 0 3px 0;
+  background-color: #fff;
+  color: #000;
+}
+
+.content {
+  width: 95%;
+  margin: 10px;
+  font-size: 20px;
+  font-family: Roboto;
+  color: #000;
+}
+
+
+/* FOOTER */
+
+#footer {
+  min-height: 10px;
+  max-height: 10px;
+  width: 100%;
+  padding-bottom: 10px;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  color: #fff;
+  background: radial-gradient(#188ff4, #0062c1);
+  z-index: 1;
+}
+
+
+/* "We are the music-makers, and we are the dreamers of dreams" */
