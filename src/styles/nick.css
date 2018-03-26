@@ -5,29 +5,45 @@
 
 
 */
-
+/*
 #landing {
   background: url("../../src/developers/nick/images/BG_laptop.jpg") no-repeat center center fixed;
   background-size: 100% auto;
   background-position-y: top;
   height: 600px;
+} */
+
+html {
+  background: #f6f6f6;
 }
+
+
+/* #landing {
+  -moz-filter: grayscale(95%);
+  -webkit-filter: grayscale(95%);
+  filter: gray;
+  filter: grayscale(95%);
+} */
 
 #personalHeader {
   padding-top: 15px;
   height: 75px;
   vertical-align: middle;
-  padding-bottom: 1%;  
+  padding-bottom: 10px;  
 }
 
 #personalHeader img.logo {
   text-align: center;
   display: inline;
   padding-left: 15px;
+  min-width: 50px;
+  max-width: 75px;
+  width: 10%;
 }
 
 #personalHeader img.social {
   float: right;
+  padding-right: 15px;
 }
 
 #headline h1 {
@@ -38,8 +54,14 @@
   font-family: 'Cormorant Garamond', serif;
 }
 
+@media screen and (min-width: 1200px) {
+  #headline h1 {
+    font-size: 54px;
+  }
+}
+
 #headline {
-  margin-left: 10%;
+  margin-left: 20%;
   float: left;
   min-width: 30%;
   display: inline;
