@@ -8,18 +8,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!--CSS-->
-<link rel="stylesheet" type="text/css" href="z.css">
-
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="screen and (max-width:550px)" href="zSmall.css">
+<link rel="stylesheet" type="text/css" media="screen and (min-width: 551px) and (max-width:875px)" href="zMed.css">
+<link rel="stylesheet" type="text/css" media="screen and (min-width:876px)" href="zLarge.css">
 
 <!--SCRIPTS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="../../scripts/smc.js"></script>
-<link type="text/javascript" href="z.js">
+<script type="text/javascript" src="z.js"></script>
 
 </head>
 
 <body>
-  
+
 
 <!-- HEADER -->
 
@@ -43,43 +44,76 @@
 
 </div>
 
-<!-- Personalized Code -->
+<!-- DEV Info -->
 
 <div id="contentBody">
 
-  <div class="zDEV">
-   <div class="devNameBox">
-      <h3 class="devName">Eric</h3>
-   </div>
+  <div class="zInfo">
     <img src="https://avatars1.githubusercontent.com/u/35619162?s=400&u=4db6b2d34ffb3cdfbedc100d5ce2f5747f681bfc&v=4" alt="Z" class="devPic">
-    <ul class="devInfo">
-      <li class="devBoxList"><span class="devInfoListItems">GitHub:</span> ZumDeWald</li>
-      <li class="devBoxList"><span class="devInfoListItems">Location:</span> St. Louis</li>
-      <li class="devBoxList"><span class="devInfoListItems">Bio:</span> I'm NEW, but working on it...</li>
+
+    <h4 class="connect">[ Eric - St. Louis, MO ]</h4>
+
+    <div class="logoBox">
+
+      <h4 class="connect">Connect with Eric:</h4>
+
+      <a class="iconLink" href="https://github.com/ZumDeWald" target="_blank">
+        <img class="logos" src="imgs/GHLogo.svg" alt="GitHub" />
+      </a>
+
+      <a class="iconLink" href="https://codepen.io/ZumDeWald/" target="_blank">
+        <img class="logos" src="imgs/CPLogo.svg" alt="CodePen" />
+      </a>
+
+      <a class="iconLink" href="https://twitter.com/ZumDeWald" target="_blank">
+        <img class="logos" src="imgs/TwitLogo.svg" alt="Twitter" />
+      </a>
+   </div>
+
   </div>
 
+<!-- Main Content Area -->
+
  <div id="devContentArea">
+
    <div class="redBox">
-  <p class="boxContent">CONTENT</p>
+    <p class="boxHeading">
+      &nbsp; [ You MUST start with Family ]
+    </p>
+    <div class="contentPic">
+      <img src="imgs/famSmall.jpg" alt="Familia">
+    </div>
+    <div class="content">
+        &nbsp; I have a wonderfully-wacky family. My son <u><em>is</em></u> Batman, my daughter <u><em>is</em></u> a princess, and my wife <u><em>is</em></u> amazing.
+    </div>
    </div>
 
    <div class="blueBox">
-  <p class="boxContent">CONTENT</p>
+    <p class="boxHeading">
+      &nbsp; [ I have lived a <em> few </em> lives ]
+    </p>
+    <div class="content">
+       &nbsp; Cowboy, guitar repairman, IP/Fiber technician ... I have worn many hats during my 30+ years on this earth.
+    </div>
    </div>
 
    <div class="redBox">
-  <p class="boxContent">CONTENT</p>
+    <p class="boxHeading">
+      &nbsp; [ CONTENT ]
+    </p>
    </div>
 
    <div class="blueBox">
-  <p class="boxContent">CONTENT</p>
+    <p class="boxHeading">
+      &nbsp; [ CONTENT ]
+    </p>
    </div>
 
 </div>
 
 <!-- FOOTER -->
 
-<div id="footer">Copyright 2018 Show Me Coders</div>
+<div id="footer">Copyright 2018 Show-Me Coders</div>
 
 </body>
 </html>
