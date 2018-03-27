@@ -145,18 +145,6 @@ div.menu img {
   font-size: 20px;
 }
 
-.devRows {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  align-content: space-around;
-  flex-wrap: wrap;
-  width: 90%;
-  height: auto;
-  margin: auto;
-}
-
 .devBox {
   display: flex;
   align-items: center;

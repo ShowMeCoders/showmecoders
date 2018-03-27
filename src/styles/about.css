@@ -1,0 +1,59 @@
+.aboutRows {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+
+.aboutBox {
+  display: flex;
+  align-items: center;
+  background: radial-gradient(#188ff4, #0062c1);
+  opacity: 0.85;
+  width: 50%;
+  min-width: 50%;
+  height: 60%;
+  min-height: 60%;
+  margin: 0 20px 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.aboutBox:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  opacity: 1;
+}
+
+.aboutTitleBox {
+  display: inline-block;
+  background-color: #000;
+  height: 100%;
+  width: 10%;
+  margin: 0 12px 0 0;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.aboutTitle {
+  position: relative;
+  top: 108px;
+  transform: rotate(-90deg);
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.aboutTitle h3 {
+}
+
+.aboutText {
+  flex-direction: column;
+  width: 100%;
+  font-size: 18px;
+}
