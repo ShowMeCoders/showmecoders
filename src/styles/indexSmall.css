@@ -12,71 +12,80 @@ html {
 }
 
 body{
-  font-family: 'Roboto',Tahoma,Verdana,sans-serif;
-  margin: 100px 0 50px 0;
+  font-family: Roboto, Tahoma, Verdana, sans-serif;
+  margin: 0 0 50px 0;
+}
+
+/* Oversizing catch-all */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+/* Remove underline from links */
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* HEADER & MENU */
 
 #header {
   position: fixed;
-  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   width: 100%;
   background: radial-gradient(#188ff4,#0062c1);
-  text-align: center;
-  font-size: 12px;
   color: #ffffff;
   z-index: 999;
-  vertical-align: middle;
   height: 50px;
-  display: inline-block;
-}
-
-#header p {
-  vertical-align: middle;
-}
-
-#header a {
-  vertical-align: middle;
+  margin-bottom: 80px;
 }
 
 .banner {
   height: 45px;
-  vertical-align: middle;
   margin: 2px;
   max-width: 50%;
-  display: inline;
+  margin-right: 11%;
 }
 
 .banner img {
   max-width: 100%;
   max-height: 90%;
-  margin-top: 2px;
+  margin-top: 5px;
 }
 
 .props {
   display: none;
-  float: left;
   margin-left: 10px;
   padding-right:5%;
   max-width: 30%;
 }
 
-.props img {
-  vertical-align: middle;
-}
-
 .menu {
   height: inherit;
-  float: right;
-  top: 0;
-  display: inline-block;
   position: relative;
   list-style: none;
 }
 
 .menu img {
-  height: 60%;
+  height: 40px;
   filter: brightness(0) invert(1);
 }
 
@@ -90,9 +99,6 @@ body{
   cursor: pointer;
 }
 
-.menuButton:hover, .menuButton:focus {
-  background-color: #e9e9e9;
-}
 .menuContent {
   display: none;
   position: absolute;
@@ -110,10 +116,6 @@ body{
   display: block;
 }
 
-.menuContent a:hover {
-  background-color: #f4564b;
-}
-
 .show {display: block;}
 
 .navbar {
@@ -126,10 +128,6 @@ body{
   color: white;
   padding: 14px 16px;
   text-decoration: none;
-}
-
-.navbar a:hover {
-  background-color: #f4564b;
 }
 
 /* DEV BOXES */
@@ -148,6 +146,7 @@ body{
   background: #fff;
   text-align: center;
   font-size: 20px;
+  margin-top: 75px;
   margin-bottom: 15px;
 }
 
@@ -170,7 +169,7 @@ body{
   opacity: 0.9;
   min-width: 300px;
   max-width: 400px;
-  height: 140px;
+  height: 120px;
   margin: 5px;
   margin-bottom: 10px;
   border-radius: 15px;
@@ -178,7 +177,7 @@ body{
 
 .devNameBox {
   background-color: #000;
-  height: 140px;
+  height: 120px;
   width: 40px;
   margin: 0 12px 0 0;
   border-top-left-radius: 15px;
@@ -187,7 +186,7 @@ body{
 
 .devName {
   position: relative;
-  top: 68px;
+  top: 55px;
   transform: rotate(-90deg);
   color: #fff;
   font-size: 20px;
@@ -225,23 +224,6 @@ li {
 
 #feed {
   margin: 50px 15% 25px 15%;
-}
-
-/* PORTFOLIO/BIO BOXES */
-
-div.portfolio {
-  background: radial-gradient(#6bbfff,#188ff4);
-  border: 0em;
-  padding: 25px 5%;
-  margin-bottom: 25px;
-  width: 100%;
-}
-
-#bio {
-  background: radial-gradient(#ff8977,#f4564b);
-  border: 0em;
-  padding: 25px 5% 25px 5%;
-  width: 100%;
 }
 
 /*!
@@ -584,10 +566,11 @@ span.gha-time {
   min-height: 10px;
   max-height: 10px;
   width: 100%;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   bottom: 0;
   position: fixed;
   text-align: center;
+  font-size: 12px;
   color: #fff;
   background: radial-gradient(#188ff4, #0062c1);
   z-index: 1;
