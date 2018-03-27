@@ -1,4 +1,4 @@
-.aboutRows {
+.about-rows {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -9,7 +9,7 @@
   margin: auto;
 }
 
-.aboutBox {
+.about-box {
   display: flex;
   align-items: center;
   background: radial-gradient(#188ff4, #0062c1);
@@ -24,12 +24,12 @@
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-.aboutBox:hover {
+.about-box:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   opacity: 1;
 }
 
-.aboutTitleBox {
+.about-title-box {
   display: inline-block;
   background-color: #000;
   height: 100%;
@@ -39,7 +39,7 @@
   border-bottom-left-radius: 15px;
 }
 
-.aboutTitle {
+.about-title {
   position: relative;
   top: 108px;
   transform: rotate(-90deg);
@@ -49,11 +49,47 @@
   white-space: nowrap;
 }
 
-.aboutTitle h3 {
+.about-title h3 {
 }
 
-.aboutText {
+.about-text {
   flex-direction: column;
   width: 100%;
   font-size: 18px;
+  margin: 0 10px 0 10px;
+}
+
+.contributors-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contributor-left {
+  display: flex;
+  align-items: center;
+  float: left;
+  width: 100%;
+}
+
+.contributor-right {
+  display: flex;
+  align-items: center;
+  float: right;
+  margin: 0 0 0 50%;
+}
+
+.contributor-avatar {
+  background-image: url('https://avatars1.githubusercontent.com/u/1287072?s=460&v=4');
+  width: 100px;
+  height: 100px;
+  background-size: 100%;
+  border-radius: 50px;
+}
+
+.contributor-name {
+  font-size: 20px;
+  margin: 0 10px 0 10px;
 }
