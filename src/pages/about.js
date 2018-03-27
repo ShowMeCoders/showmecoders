@@ -6,8 +6,6 @@ $(document).ready(function() {
   fetch('https://api.github.com/repos/ShowMeCoders/showmecoders/contributors')
   .then(response => response.json())
   .then(data => {
-    console.log(data);
-
     const contributorLeft =
       '<div id="$login$" class="contributor-left"> \
         <span class="contributor-avatar" style="background-image: url(\'$avatar$\')"></span> \
