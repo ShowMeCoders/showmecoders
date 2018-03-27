@@ -59,7 +59,7 @@
   margin: 0 10px 0 10px;
 }
 
-.contributors-container {
+.contributors-wrapper {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -82,7 +82,6 @@
 }
 
 .contributor-avatar {
-  background-image: url('https://avatars1.githubusercontent.com/u/1287072?s=460&v=4');
   width: 100px;
   height: 100px;
   background-size: 100%;

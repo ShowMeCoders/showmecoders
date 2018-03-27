@@ -1,0 +1,24 @@
+{
+  "name": "showmecoders",
+  "version": "1.0.0",
+  "description": "A showcase of Missouri participants in the Grow With Google Challenge Scholarship",
+  "main": "",
+  "scripts": {
+    "build": "./node_modules/.bin/rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShowMeCoders/showmecoders.git"
+  },
+  "author": "ShowMeCoders",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShowMeCoders/showmecoders/issues"
+  },
+  "homepage": "https://github.com/ShowMeCoders/showmecoders#readme",
+  "dependencies": {
+    "gitaclue": "^0.2.1"
+  },
+  "devDependencies": {}
+}
