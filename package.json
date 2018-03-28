@@ -17,8 +17,6 @@
     "url": "https://github.com/ShowMeCoders/showmecoders/issues"
   },
   "homepage": "https://github.com/ShowMeCoders/showmecoders#readme",
-  "dependencies": {
-    "gitaclue": "^0.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {}
 }
