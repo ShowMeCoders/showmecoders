@@ -1,23 +1,22 @@
 .about-rows {
   display: flex;
-  flex-shrink: 1;
-  flex-basis: auto;
   justify-content: space-around;
   align-items: center;
   align-content: space-around;
   flex-wrap: wrap;
+  width: 90%;
+  height: auto;
   margin: auto;
 }
 
 .about-box {
   display: flex;
-  flex-shrink: 1;
-  flex-basis: auto;
   align-items: center;
   background: radial-gradient(#188ff4, #0062c1);
   opacity: 0.85;
-  width: 60%;
-  min-width: 60%;
+  height: inherit;
+  width: 50%;
+  min-width: 50%;
   margin: 0 20px 40px 20px;
   border-radius: 15px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -30,9 +29,7 @@
 }
 
 .about-title-box {
-  display: inline-block;
   background-color: #000;
-  height: 100%;
   width: 10%;
   margin: 0 12px 0 0;
   border-top-left-radius: 15px;
@@ -41,7 +38,7 @@
 
 .about-title {
   position: relative;
-  top: 108px;
+  top: 45%;
   transform: rotate(-90deg);
   color: #fff;
   font-size: 20px;
@@ -50,10 +47,6 @@
 }
 
 .about-text {
-  display: flex;
-  flex-shrink: 1;
-  flex-basis: auto;
-  flex-direction: column;
   width: 100%;
   font-size: 18px;
 }

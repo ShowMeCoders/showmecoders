@@ -2,6 +2,8 @@
 $(document).ready(function() {
   console.clear();
 
+  $( "#project-title-box" ).css('height',  $( "#project-box" ).css( "height" ));
+
   // Retrieve Repo & Contributor info from GitHub
   fetch('https://api.github.com/repos/ShowMeCoders/showmecoders/contributors')
   .then(response => response.json())
@@ -38,6 +40,8 @@ $(document).ready(function() {
       contributorInfo += currentContributor;
     });
     $( ".contributors-wrapper" ).html(contributorInfo);
+    $( "#team-title-box" ).css('height',  $( "#team-box" ).css( "height" ));
+
   })
   .catch((error) => {
     console.log(error);
