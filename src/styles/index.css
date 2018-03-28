@@ -178,7 +178,7 @@ div.menu img {
 
 .devNameBox {
   background-color: #000;
-  height: 175px;
+  height: inherit;
   width: 40px;
   margin: 0 12px 0 0;
   border-top-left-radius: 15px;
@@ -187,7 +187,7 @@ div.menu img {
 
 .devName {
   position: relative;
-  top: 108px;
+  top: 45%;
   transform: rotate(-90deg);
   color: #fff;
   font-size: 20px;
