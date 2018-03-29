@@ -40,7 +40,7 @@ $(document).ready(function() {
       contributorInfo += currentContributor;
     });
     $( ".contributors-wrapper" ).html(contributorInfo);
-    $( "#team-title-box" ).css('height',  $( "#team-box" ).css( "height" ));
+    $( "#team-title-box" ).css('height', $( "#team-box" ).css( "height" ));
 
   })
   .catch((error) => {
