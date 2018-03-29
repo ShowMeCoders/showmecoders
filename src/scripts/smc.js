@@ -1,8 +1,4 @@
 
-
-
-
-
 /* Header and shrink/grow tagline from Nick  */
 
 function headerMenu() {
