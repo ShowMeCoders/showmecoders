@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!--INSERT CSS-->
-  <link rel="stylesheet" type="text/css" media="screen and (max-width:600px)" href="./src/styles/indexSmall.css">
-  <link rel="stylesheet" type="text/css" media="screen and (min-width:601px) and (max-width:1200px)" href="./src/styles/index.css">
+  <link rel="stylesheet" type="text/css" media="screen and (max-width:800px)" href="./src/styles/indexSmall.css">
+  <link rel="stylesheet" type="text/css" media="screen and (min-width:801px)" href="./src/styles/indexLarge.css">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500" rel="stylesheet">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
   <link rel="stylesheet" href="github-activity-0.1.5.min.css">
 
 <!--INSERT SCRIPTS-->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="./src/scripts/smc.js"></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-  <script type="text/javascript" src="github-activity-0.1.5.min.js"></script>
+  <script defer type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script defer type="text/javascript" src="./src/scripts/smc.js"></script>
+  <script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+  <script defer type="text/javascript" src="github-activity-0.1.5.min.js"></script>
 
 
 </head>
@@ -26,24 +26,35 @@
 <div id="header">
 
 
-    <div class="props"><p>A showcase of skills learned in conjunction<br>with  <a href="http://www.udacity.com" title="Udacity" style="vertical-align:bottom"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/udacity.png?raw=true" height="15px"></a>  and  <a href="http://grow.google" title="Grow with Google"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/gwg.png?raw=true" height="15px" style="vertical-align:middle"></a></div>
+    <div class="props"><p>A showcase of skills learned in conjunction <br> &nbsp; &nbsp; with  <a href="http://www.udacity.com" title="Udacity" style="vertical-align:bottom"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/udacity.png?raw=true" height="15px"></a>  and  <a href="http://grow.google" title="Grow with Google"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/gwg.png?raw=true" height="15px" style="vertical-align:middle"></a></div>
 
     <div class="banner">
             <a href="http://showmecoders.zyphyrmedia.org" title="Show Me Coders"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/showmecoders-logo1-white.png?raw=true" alt="Show-Me Coders"></a>
     </div>
 
-    <div class="menu">
+    <div class="hamburgerMenu">
         <button onclick="headerMenu()" class="menuButton"><img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRo%0D%0APSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0w%0D%0AIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4KICAgIDxwYXRoIGQ9Ik0zIDE4aDE4di0ySDN2Mnpt%0D%0AMC01aDE4di0ySDN2MnptMC03djJoMThWNkgzeiIvPgo8L3N2Zz4="></button>
         <div id="menuOptions" class="menuContent">
-            <a href="/../blog.html">Blog</a>
-            <a href="/../forum.html">Forum</a>
-            <a href="/../inspiration.html">Inspiration</a>
+          <a href="about.html" class="fullMenuLinks">About</a>
+          <a href="forum.html" class="fullMenuLinks">Forum</a>
+          <a href="inspiration.html" class="fullMenuLinks">Inspiration</a>
         </div>
 
     </div>
 
 
 </div>
+
+
+<!-- Full Size MENU -->
+
+<div class="fullMenu">
+  <a href="about.html" class="fullMenuLinks">About</a>
+  <a href="forum.html" class="fullMenuLinks">Forum</a>
+  <a href="inspiration.html" class="fullMenuLinks">Inspiration</a>
+
+</div>
+
 
 <!-- Welcome Message -->
 <div id="welcome">

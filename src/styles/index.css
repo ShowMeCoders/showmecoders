@@ -130,6 +130,38 @@ div.menu img {
   background-color: #f4564b;
 }
 
+/* WELCOME */
+
+#welcome {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 200px;
+}
+
+.welcomeMessage {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  margin-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  background-color: #f4564bc9;
+  background-image: url("../../assets/CSSTexture1.png");
+  border-top: 5px solid #a9a9a9;
+  border-bottom: 5px solid #a9a9a9;
+}
+
+.welcomeHeader {
+  color: #fff;
+  font-size: 20px;
+  margin: 8px;
+}
+
 /* DEV BOXES */
 
 .contDEVs {
