@@ -53,25 +53,24 @@
 
 .contributors-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
+  flex-flow: row wrap;
   width: 100%;
-  margin: 10px 10px 10px 10px;
+  margin: 15px 15px 15px 0;
 }
 
 .contributor-left {
   display: flex;
+  flex-basis: 100%;
   align-items: center;
-  float: left;
-  width: 100%;
 }
 
 .contributor-right {
   display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  justify-content: flex-end;
   align-items: center;
   float: right;
-  margin: 0 0 0 50%;
 }
 
 .contributor-avatar {
@@ -79,6 +78,8 @@
   height: 100px;
   background-size: 100%;
   border-radius: 50px;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 6px 1px #000;
 }
 
 .contributor-name {
