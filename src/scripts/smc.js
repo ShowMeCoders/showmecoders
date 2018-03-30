@@ -696,15 +696,26 @@ GitHubActivity.feed({
 });
 
 /**
- * @description Generate the HTML required to display information for all 
+ * @description Generate the HTML required to display information for all
  * contributors to the ShowMeCoders GitHub repo.
  * @param {String} contributorHtml A string containing the HTML tags used to
  * format the information for a contributor. Placeholders are used to define
- * where information from GitHub is to be placed. 
- * - $login$ - The contributors GitHub login name
- * - $username$ - The contributors full name from their GitHub profile
- * - $location$ - The contributors residence location from their GitHub profile
+ * where information from GitHub is to be placed and may be reference zero or
+ * more times in the string.
+ * - $avatar$ - The URL of the users GitHub avatar
  * - $bio$ - The bio from the contributors GitHub Profile
+ * - $location$ - The contributors residence location from their GitHub profile
+ * - $login$ - The contributors GitHub login name
+ * - $profile$ - The contributors Github profile URL
+ * - $username$ - The contributors full name from their GitHub profile
+ * @example <caption>Call this function using the following</caption>
+ *   renderContributors(contributorHtml)
+ *   .then((resultHtml) => {
+ *     <-- use the data in resultHtml -->
+ *   })
+ *   .catch(error => {
+ *     console.log(error);
+ *   });
  * @returns {String[]} An array of strings. Each entry in the array contains
  * the model from `contributorHtml`, but with the placeholders replaced by the
  * values retrieved from GitHub for each contributor to the repo.
@@ -715,30 +726,28 @@ function renderContributors(contributorHtml) {
     typeof contributorHtml !== 'string') {
       throw new Error(`Invalid contributorHtml parameter: ${contributorHtml}`);
     }
-  
+
   // Retrieve Repo & Contributor info from GitHub
-  fetch('https://api.github.com/repos/ShowMeCoders/showmecoders/contributors')
+  let resultHtml = [];
+
+  return fetch('https://api.github.com/repos/ShowMeCoders/showmecoders/contributors')
   .then(response => response.json())
-  .then(data => {
-
-    let contributorInfo = '';
-    let currentContributor = '';
-    let contributors = [];
-
-    data.forEach(element => {
-      console.log('element: ', element);
-      /*
-      currentContributor = contributorHtml.replace('$location$', element.html_url);
-      currentContributor = contributorHtml.replace('$login$', element.login);
-      currentContributor = contributorHtml.replace('$username$', element.login);
-      currentContributor = contributorHtml.replace('$avatar$', element.avatar_url);
-      contributorInfo += currentContributor;
-      */
+  .then(repoContributors => {
+    let userPromises = repoContributors.map((user) => {
+      return fetch(`https://api.github.com/users/${user.login}`)
+      .then(response => response.json())
+      .then(user => {
+        let currentContributor = contributorHtml
+        .replace('$avatar$', user.avatar_url)
+        .replace('$bio$', user.bio)
+        .replace('$location$', user.location)
+        .replace('$login$', user.login)
+        .replace('$profile$', user.html_url)
+        .replace('$username$', user.name);
+        resultHtml.push(currentContributor);
+      });
     });
-    
-    return contributorsHtml;
-  })
-  .catch((error) => {
-    console.log(error);
+    return Promise.all(userPromises)
+    .then(() => resultHtml);
   });
 }
