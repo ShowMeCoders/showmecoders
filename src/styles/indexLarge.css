@@ -48,7 +48,7 @@ a:active {
 #header {
   position: fixed;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   background: radial-gradient(#188ff4,#0062c1);
@@ -77,6 +77,7 @@ a:active {
 }
 
 .fullMenu {
+  position: fixed;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -175,7 +176,7 @@ a:active {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  margin-top: 55px;
+  margin-top: 110px;
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
