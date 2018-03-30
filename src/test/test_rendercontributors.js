@@ -39,9 +39,10 @@ function testRender() {
  *   .catch(error => {
  *     console.log(error);
  *   });
- * @returns {String[]} An array of strings. Each entry in the array contains
- * the model from `contributorHtml`, but with the placeholders replaced by the
- * values retrieved from GitHub for each contributor to the repo.
+ * @returns {String[]} A promise whose value is an array of strings when
+ * resolved. Each entry in the array contains the model from `contributorHtml`,
+ * but with the placeholders replaced by the values retrieved from GitHub for
+ * each contributor to the repo.
  */
 function renderContributors(contributorHtml) {
   // Validate the input parameter
