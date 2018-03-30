@@ -694,3 +694,51 @@ GitHubActivity.feed({
   selector: "#feed",
   limit: 10 // optional
 });
+
+/**
+ * @description Generate the HTML required to display information for all 
+ * contributors to the ShowMeCoders GitHub repo.
+ * @param {String} contributorHtml A string containing the HTML tags used to
+ * format the information for a contributor. Placeholders are used to define
+ * where information from GitHub is to be placed. 
+ * - $login$ - The contributors GitHub login name
+ * - $username$ - The contributors full name from their GitHub profile
+ * - $location$ - The contributors residence location from their GitHub profile
+ * - $bio$ - The bio from the contributors GitHub Profile
+ * @returns {String[]} An array of strings. Each entry in the array contains
+ * the model from `contributorHtml`, but with the placeholders replaced by the
+ * values retrieved from GitHub for each contributor to the repo.
+ */
+function renderContributors(contributorHtml) {
+  // Validate the input parameter
+  if (contributorHtml === null || contributorHtml === undefined ||
+    typeof contributorHtml !== 'string') {
+      throw new Error(`Invalid contributorHtml parameter: ${contributorHtml}`);
+    }
+  
+  // Retrieve Repo & Contributor info from GitHub
+  fetch('https://api.github.com/repos/ShowMeCoders/showmecoders/contributors')
+  .then(response => response.json())
+  .then(data => {
+
+    let contributorInfo = '';
+    let currentContributor = '';
+    let contributors = [];
+
+    data.forEach(element => {
+      console.log('element: ', element);
+      /*
+      currentContributor = contributorHtml.replace('$location$', element.html_url);
+      currentContributor = contributorHtml.replace('$login$', element.login);
+      currentContributor = contributorHtml.replace('$username$', element.login);
+      currentContributor = contributorHtml.replace('$avatar$', element.avatar_url);
+      contributorInfo += currentContributor;
+      */
+    });
+    
+    return contributorsHtml;
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}
