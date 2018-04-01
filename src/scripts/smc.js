@@ -1,34 +1,67 @@
 
-/* Header and shrink/grow tagline from Nick  */
 
-function headerMenu() {
-    document.getElementById("menuOptions").classList.toggle("show");
-}
 
-window.onclick=function(event) {
-    if (!event.target.matches('.menuButton')) {
-        var dropdowns = document.getElementsByClassName("menuContent");
-        var i;
-        for (i=0; i<dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
+/* Generate DEV Boxes Dynamically From GH */
 
-        }
-    }
-}
+/*
+$(document).ready(function() {
+  console.clear();
 
-$(window).resize(function() {
+  // Retrieve Repo & Contributor info from GitHub
+  fetch('https://api.github.com/repos/ShowMeCoders/showmecoders/contributors')
+  .then(response => response.json())
+  .then(data => {
+    var generateContributor =
+      '<div class="devBox"> \
+       <div class="devNameBox"> \
+          <h3 class="devName">$name$</h3> \
+       </div> \
+       <a class="devLinks" href="$profile$" target="_blank"> \
+        <img src="$avatar$" alt="$name$" class="devPic"> \
+          <ul class="devInfo"> \
+            <li><span class="devInfoListItems">GitHub:</span>$login$</li> \
+            <li><span class="devInfoListItems">Loc.:</span> St. Charles</li> \
+            <li><span class="devInfoListItems">Bio:</span> Experienced IT professional</li> \
+          </ul> \
+        </a> \
+      </div>';
 
-  if ($(this).width() < 800) {
+    let contributorInfo = '';
+    let currentContributor = '';
+    let contributors = [];
 
-    $('.props').hide();
+    data.forEach(element => {
+      currentContributor = outlineContributor.replace('$profile$', element.html_url);
+      currentContributor = outlineContributor.replace('$login$', element.login);
+      currentContributor = outlineContributor.replace('$name$', element.login);
+      currentContributor = outlineContributor.replace('$avatar$', element.avatar_url);
+      contributorInfo += currentContributor;
+    });
+    $( ".devRows" ).html(contributorInfo);
 
-  } else {
-
-    $('.props').show();
-
-    }
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 });
+*/
+
+/*
+<div class="devBox"> \
+ <div class="devNameBox"> \
+    <h3 class="devName">$name$</h3> \
+ </div> \
+ <a class="devLinks" href="$profile$" target="_blank"> \
+  <img src="$avatar$" alt="Jim" class="devPic"> \
+    <ul class="devInfo"> \
+      <li><span class="devInfoListItems">GitHub:</span>$login$</li> \
+      <li><span class="devInfoListItems">Loc.:</span> St. Charles</li> \
+      <li><span class="devInfoListItems">Bio:</span> Experienced IT professional</li> \
+    </ul> \
+  </a> \
+</div>
+*/
 
 
 
@@ -737,13 +770,35 @@ function renderContributors(contributorHtml) {
       return fetch(`https://api.github.com/users/${user.login}`)
       .then(response => response.json())
       .then(user => {
+        // Cleanse the data prior to rendering the page
+        const avatar = user.avatar_url !== null ? user.avatar_url : 'N/a';
+        let bio = user.bio !== null ? user.bio : 'N/a';
+        const location = user.location !== null ? user.location : 'N/a';
+        const login = user.login !== null ? user.login : 'N/a';
+        const profile = user.html_url !== null ? user.html_url : 'N/a';
+        const userName = user.name !== null ? user.name : 'N/a';
+
+        const MAX_BIO_LENGTH = 50;
+        if (bio.length > MAX_BIO_LENGTH) {
+          let endPosition = bio.length;
+          const newBio = bio.split('');
+          for (let i = MAX_BIO_LENGTH; i < newBio.length; i += 1) {
+            if (newBio[i] === ' ') {
+              endPosition = i;
+              break;
+            }
+          }
+          bio = bio.slice(0, endPosition)+'...';
+        }
+
+        // Replace placeholders with contributor-specific values
         let currentContributor = contributorHtml
-        .replace('$avatar$', user.avatar_url)
-        .replace('$bio$', user.bio)
-        .replace('$location$', user.location)
-        .replace('$login$', user.login)
-        .replace('$profile$', user.html_url)
-        .replace('$username$', user.name);
+        .replace('$avatar$', avatar)
+        .replace('$bio$', bio)
+        .replace('$location$', location)
+        .replace('$login$', login)
+        .replace('$profile$', profile)
+        .replace('$username$', userName);
         resultHtml.push(currentContributor);
       });
     });
