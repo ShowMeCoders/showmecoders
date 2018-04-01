@@ -53,9 +53,9 @@ a:active {
   width: 100%;
   background: radial-gradient(#188ff4,#0062c1);
   color: #ffffff;
-  z-index: 999;
   height: 50px;
   margin-bottom: 80px;
+  z-index: 999;
 }
 
 .banner {
@@ -77,9 +77,27 @@ a:active {
 }
 
 .fullMenu {
-  display: none;
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 55px;
+  padding-bottom: 2px;
+  background-color: #0062c1d5;
+  background-image: url("../../assets/CSSTexture1.png");
+  z-index: 888;
 }
 
+.fullMenuLinks {
+  color: #fff;
+  font-size: 13px;
+  padding: 8px;
+}
+
+/* Temp remove Hambugrger MENU
 .hamburgerMenu {
   position: absolute;
   left: 85%;
@@ -132,11 +150,12 @@ a:active {
   padding: 14px 16px;
   text-decoration: none;
 }
+*/
 
 
 /* WELCOME */
 
-#welcome {
+#ourMission {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -145,12 +164,12 @@ a:active {
   min-width: 200px;
 }
 
-.welcomeMessage {
+.missionMessage {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
-  margin-top: 100px;
+  margin-top: 130px;
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
@@ -158,6 +177,7 @@ a:active {
   background-image: url("../../assets/CSSTexture1.png");
   border-top: 5px solid #a9a9a9;
   border-bottom: 5px solid #a9a9a9;
+  font-size: 13px;
 }
 
 .welcomeHeader {
@@ -166,28 +186,24 @@ a:active {
   margin: 8px;
 }
 
-a.focusLink {
-  text-decoration: underline;
-}
-
 
 /* DEV BOXES */
 
-#devArea {
+#ourTeam {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
 }
 
-.contDEVs {
+.sectionBanner {
   width: 100%;
   height: auto;
   border-bottom: 2px solid #ddd;
   background-color: #ffffffc9;
   background-image: url("../../assets/CSSTexture1.png");
   text-align: center;
-  font-size: 20px;
-  margin-top: 50px;
+  font-size: 15px;
+  margin-top: 120px;
   margin-bottom: 15px;
 }
 
@@ -227,10 +243,10 @@ a.focusLink {
 
 .devName {
   position: relative;
-  top: 45%;
+  top: 50%;
   transform: rotate(-90deg);
   color: #fff;
-  font-size: 20px;
+  font-size: 15px;
   letter-spacing: 2px;
 }
 
@@ -242,7 +258,7 @@ a.focusLink {
   box-shadow: 1px 1px 6px 1px #000;
 }
 
-ul {
+.devInfo {
   list-style-type: none;
 }
 
@@ -254,7 +270,7 @@ li {
   align-self: center;
   min-width: 120px;
   max-width: 150px;
-  font-size: 14px;
+  font-size: 13px;
   margin-left: -25px;
   margin-right: 5px;
 }
@@ -264,6 +280,13 @@ li {
 }
 
 /* GitHub FEED */
+
+#ourProject {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
 
 #feed {
   margin: 50px 15% 25px 15%;
