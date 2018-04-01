@@ -177,9 +177,9 @@ a:active {
 
 .missionMessage {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   margin-top: 130px;
   padding-left: 30px;
   padding-right: 20px;
@@ -245,7 +245,7 @@ a:active {
 .devNameBox {
   background-color: #000;
   height: inherit;
-  width: 40px;
+  width: 45px;
   margin: 0 12px 0 0;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -268,7 +268,7 @@ a:active {
   box-shadow: 1px 1px 6px 1px #000;
 }
 
-ul {
+.devInfo {
   list-style-type: none;
 }
 
