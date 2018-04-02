@@ -3,69 +3,68 @@
 
 /* Generate DEV Boxes Dynamically From GH */
 
-/*
-$(document).ready(function() {
-  console.clear();
+function renderContributors(contributorHtml) {
+  // Validate the input parameter
+  if (contributorHtml === null || contributorHtml === undefined ||
+    typeof contributorHtml !== 'string') {
+      throw new Error(`Invalid contributorHtml parameter: ${contributorHtml}`);
+    }
 
   // Retrieve Repo & Contributor info from GitHub
-  fetch('https://api.github.com/repos/ShowMeCoders/showmecoders/contributors')
+  let resultHtml = [];
+  return fetch('https://api.github.com/repos/ShowMeCoders/showmecoders/contributors')
   .then(response => response.json())
-  .then(data => {
-    var generateContributor =
-      '<div class="devBox"> \
-       <div class="devNameBox"> \
-          <h3 class="devName">$name$</h3> \
-       </div> \
-       <a class="devLinks" href="$profile$" target="_blank"> \
-        <img src="$avatar$" alt="$name$" class="devPic"> \
-          <ul class="devInfo"> \
-            <li><span class="devInfoListItems">GitHub:</span>$login$</li> \
-            <li><span class="devInfoListItems">Loc.:</span> St. Charles</li> \
-            <li><span class="devInfoListItems">Bio:</span> Experienced IT professional</li> \
-          </ul> \
-        </a> \
-      </div>';
-
-    let contributorInfo = '';
-    let currentContributor = '';
-    let contributors = [];
-
-    data.forEach(element => {
-      currentContributor = outlineContributor.replace('$profile$', element.html_url);
-      currentContributor = outlineContributor.replace('$login$', element.login);
-      currentContributor = outlineContributor.replace('$name$', element.login);
-      currentContributor = outlineContributor.replace('$avatar$', element.avatar_url);
-      contributorInfo += currentContributor;
+  .then(repoContributors => {
+    let userPromises = repoContributors.map((user) => {
+      return fetch(`https://api.github.com/users/${user.login}`)
+      .then(response => response.json())
+      .then(user => {
+        let currentContributor = contributorHtml
+        .replace('$avatar$', user.avatar_url)
+        .replace('$bio$', user.bio)
+        .replace('$location$', user.location)
+        .replace('$login$', user.login)
+        .replace('$profile$', user.html_url)
+        .replace('$username$', user.name);
+        resultHtml.push(currentContributor);
+      });
     });
-    $( ".devRows" ).html(contributorInfo);
-
-  })
-  .catch((error) => {
-    console.log(error);
+    return Promise.all(userPromises)
+    .then(() => resultHtml);
   });
+}
 
-});
-*/
+/* Calling function to Dynamically Generate DEVs from GH */
 
-/*
-<div class="devBox"> \
- <div class="devNameBox"> \
-    <h3 class="devName">$name$</h3> \
- </div> \
- <a class="devLinks" href="$profile$" target="_blank"> \
-  <img src="$avatar$" alt="Jim" class="devPic"> \
-    <ul class="devInfo"> \
-      <li><span class="devInfoListItems">GitHub:</span>$login$</li> \
-      <li><span class="devInfoListItems">Loc.:</span> St. Charles</li> \
-      <li><span class="devInfoListItems">Bio:</span> Experienced IT professional</li> \
-    </ul> \
-  </a> \
-</div>
-*/
+$(document).ready(function() {
+
+  var contributorHtml =
+    '<div class="devBox"> \
+       <div class="devNameBox"> \
+          <h3 class="devName">$username$</h3> \
+       </div> \
+     <a class="devLinks" href="$profile$" target="_blank"> \
+      <img src="$avatar$" alt="$username$" class="devPic"> \
+        <ul class="devInfo"> \
+          <li><span class="devInfoListItems">GitHub:</span> $login$</li> \
+          <li><span class="devInfoListItems">Loc:</span> $location$</li> \
+          <li><span class="devInfoListItems">Bio:</span> $bio$</li> \
+      </a> \
+    </div> '
+
+     renderContributors(contributorHtml)
+     .then((resultHtml) => {
+       $("div.devRows").append(resultHtml);
+     })
+     .catch(error => {
+       console.log(error);
+     });
+
+})
 
 
 
-/*  JS Kyle G found to activate and update GitHub Feed  */
+/*  Kyle G found this JS to add GH activity feed  */
 
 /*!
  * GitHub Activity Stream - v0.1.4 - 10/7/2015

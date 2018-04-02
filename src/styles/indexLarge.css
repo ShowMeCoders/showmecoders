@@ -48,7 +48,7 @@ a:active {
 #header {
   position: fixed;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   background: radial-gradient(#188ff4,#0062c1);
@@ -72,14 +72,16 @@ a:active {
 }
 
 .props {
-  margin-left: 18px;
+  position: absolute;
+  left: 3%;
   width: 500px;
 }
 
 .fullMenu {
+  position: fixed;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: auto;
@@ -87,11 +89,12 @@ a:active {
   padding-bottom: 2px;
   background-color: #0062c1d5;
   background-image: url("../../assets/CSSTexture1.png");
+  z-index: 888;
 }
 
 .fullMenuLinks {
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   padding-left: 10px;
   padding-right: 12px;
 }
@@ -101,6 +104,7 @@ a:active {
   background-image: url("../../assets/CSSTexture1.png")
 }
 
+/* Temp remove Hambugrger MENU
 .hamburgerMenu {
   display: none;
   height: inherit;
@@ -158,10 +162,11 @@ a:active {
   padding: 14px 16px;
   text-decoration: none;
 }
+*/
 
 /* WELCOME */
 
-#welcome {
+#ourMission {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -170,43 +175,38 @@ a:active {
   min-width: 200px;
 }
 
-.welcomeMessage {
+.missionMessage {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  margin-top: 55px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-top: 130px;
+  padding-left: 30px;
+  padding-right: 20px;
   width: 100%;
   background-color: #f4564bc9;
   background-image: url("../../assets/CSSTexture1.png");
   border-top: 5px solid #a9a9a9;
   border-bottom: 5px solid #a9a9a9;
-  line-height: 20px;
+  font-size: 18px;
 }
 
 .welcomeHeader {
   color: #fff;
   font-size: 20px;
-  margin: 0;
-  padding-top: 10px;
-}
-
-a.focusLink {
-  text-decoration: underline;
+  margin: 8px;
 }
 
 
 /* DEV BOXES */
 
-#devArea {
+#ourTeam {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
 }
 
-.contDEVs {
+.sectionBanner {
   width: 100%;
   height: auto;
   border-bottom: 2px solid #ddd;
@@ -214,7 +214,7 @@ a.focusLink {
   background-image: url("../../assets/CSSTexture1.png");
   text-align: center;
   font-size: 20px;
-  margin-top: 75px;
+  margin-top: 145px;
   margin-bottom: 50px;
 }
 
@@ -237,7 +237,7 @@ a.focusLink {
   background-image: url("../../assets/CSSTexture1.png");
   width: 350px;
   height: 160px;
-  margin: 20px;
+  margin: 45px;
   margin-bottom: 10px;
   border-radius: 15px;
 }
@@ -245,7 +245,7 @@ a.focusLink {
 .devNameBox {
   background-color: #000;
   height: inherit;
-  width: 40px;
+  width: 45px;
   margin: 0 12px 0 0;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -253,10 +253,10 @@ a.focusLink {
 
 .devName {
   position: relative;
-  top: 45%;
+  top: 52%;
   transform: rotate(-90deg);
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 2px;
 }
 
@@ -268,7 +268,7 @@ a.focusLink {
   box-shadow: 1px 1px 6px 1px #000;
 }
 
-ul {
+.devInfo {
   list-style-type: none;
 }
 
@@ -279,7 +279,7 @@ li {
 .devInfo {
   align-self: center;
   width: 180px;
-  font-size: 16px;
+  font-size: 15px;
   margin-left: -20px;
   margin-right: 5px;
 }
@@ -290,6 +290,12 @@ li {
 
 
 /* GitHub FEED */
+
+#ourProject {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
 
 #feed {
   margin: 50px 15% 25px 15%;
