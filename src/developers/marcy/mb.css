@@ -1,0 +1,124 @@
+* {
+    background: grey;
+    font-family: Arial;
+    margin: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+a.git {
+    float: right;
+    left: 15px;
+    z-index: 1;
+    margin-top: 15px;
+}
+
+a.link {
+    float: right;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.bio {
+    margin-left: 200px;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.contact {
+    text-align: center;
+    white-space: pre-line;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+img.resize {
+    width: 1000px;
+    margin: auto;
+    display: block;
+}
+
+h2 {
+    background: navy;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+}
+
+h2.about {
+    margin: 20px;
+}
+
+h4 {
+    float: right;
+}
+
+li {
+    display: inline;
+    font-family: Arial;
+    font-size: 24px;
+    background: navy;
+}
+
+li a {
+    text-decoration: none;
+    background: navy;
+    }
+
+li img {
+    background: navy;
+}
+
+li a:hover {
+    color: grey;
+}
+
+li.list {
+    line-height: 120px;
+    font-size: 32px;
+}
+
+div.white {
+    float: right;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.me {
+    border-radius: 70%;
+    float: right;
+}
+
+p {
+    font-size: 24px;
+    text-align: center;
+}
+
+
+p.skills {
+    margin-left: 200px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    margin-left: 20px;
+    background: navy;
+}
+
+ul.buttons {
+   float: left;
+   width: 96%;
+   margin-left: 30px;
+   font-size: 70px;
+   font-weight: bold;
+}
+
+ul.media {
+    float: right;
+    margin-top: -15px;
+    position: fixed;
+}
