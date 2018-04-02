@@ -727,3 +727,82 @@ GitHubActivity.feed({
   selector: "#feed",
   limit: 10 // optional
 });
+
+/**
+ * @description Generate the HTML required to display information for all
+ * contributors to the ShowMeCoders GitHub repo.
+ * @param {String} contributorHtml A string containing the HTML tags used to
+ * format the information for a contributor. Placeholders are used to define
+ * where information from GitHub is to be placed and may be reference zero or
+ * more times in the string.
+ * - $avatar$ - The URL of the users GitHub avatar
+ * - $bio$ - The bio from the contributors GitHub Profile
+ * - $location$ - The contributors residence location from their GitHub profile
+ * - $login$ - The contributors GitHub login name
+ * - $profile$ - The contributors Github profile URL
+ * - $username$ - The contributors full name from their GitHub profile
+ * @example <caption>Call this function using the following</caption>
+ *   renderContributors(contributorHtml)
+ *   .then((resultHtml) => {
+ *     <-- use the data in resultHtml -->
+ *   })
+ *   .catch(error => {
+ *     console.log(error);
+ *   });
+ * @returns {String[]} A promise whose value is an array of strings when
+ * resolved. Each entry in the array contains the model from `contributorHtml`,
+ * but with the placeholders replaced by the values retrieved from GitHub for
+ * each contributor to the repo.
+ */
+function renderContributors(contributorHtml) {
+  // Validate the input parameter
+  if (contributorHtml === null || contributorHtml === undefined ||
+    typeof contributorHtml !== 'string') {
+      throw new Error(`Invalid contributorHtml parameter: ${contributorHtml}`);
+    }
+
+  // Retrieve Repo & Contributor info from GitHub
+  let resultHtml = [];
+  return fetch('https://api.github.com/repos/ShowMeCoders/showmecoders/contributors')
+  .then(response => response.json())
+  .then(repoContributors => {
+    let userPromises = repoContributors.map((user) => {
+      return fetch(`https://api.github.com/users/${user.login}`)
+      .then(response => response.json())
+      .then(user => {
+        // Cleanse the data prior to rendering the page
+        const avatar = user.avatar_url !== null ? user.avatar_url : 'N/a';
+        let bio = user.bio !== null ? user.bio : 'N/a';
+        const location = user.location !== null ? user.location : 'N/a';
+        const login = user.login !== null ? user.login : 'N/a';
+        const profile = user.html_url !== null ? user.html_url : 'N/a';
+        const userName = user.name !== null ? user.name : 'N/a';
+
+        const MAX_BIO_LENGTH = 50;
+        if (bio.length > MAX_BIO_LENGTH) {
+          let endPosition = bio.length;
+          const newBio = bio.split('');
+          for (let i = MAX_BIO_LENGTH; i < newBio.length; i += 1) {
+            if (newBio[i] === ' ') {
+              endPosition = i;
+              break;
+            }
+          }
+          bio = bio.slice(0, endPosition)+'...';
+        }
+
+        // Replace placeholders with contributor-specific values
+        let currentContributor = contributorHtml
+        .replace('$avatar$', avatar)
+        .replace('$bio$', bio)
+        .replace('$location$', location)
+        .replace('$login$', login)
+        .replace('$profile$', profile)
+        .replace('$username$', userName);
+        resultHtml.push(currentContributor);
+      });
+    });
+    return Promise.all(userPromises)
+    .then(() => resultHtml);
+  });
+}
