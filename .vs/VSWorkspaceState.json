@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\developers",
+    "\\src\\developers\\marcy",
+    "\\src\\developers\\nick",
+    "\\src\\developers\\z"
   ],
-  "SelectedNode": "\\IndividualPageWireFrame.png",
+  "SelectedNode": "\\src\\developers\\z\\index.html",
   "PreviewInSolutionExplorer": false
 }
