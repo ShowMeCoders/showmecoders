@@ -1,0 +1,118 @@
+<html>
+
+<head>
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+  <!--INSERT CSS-->
+  <link rel="stylesheet" type="text/css" media="screen and (max-width:800px)" href="../styles/indexSmall.css">
+  <link rel="stylesheet" type="text/css" media="screen and (min-width:801px)" href="../styles/indexLarge.css">
+  <link rel="stylesheet" type="text/css" href="../styles/about.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+  <!-- <link rel="stylesheet" href="github-activity-0.1.5.min.css"> -->
+
+
+  <!--INSERT SCRIPTS-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../scripts/smc.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+  <!-- <script type="text/javascript" src="github-activity-0.1.5.min.js"></script> -->
+  <script type="text/javascript" src="./about.js"></script>
+
+</head>
+
+<body>
+
+  <div id="header">
+
+
+    <div class="props"><p>A showcase of skills learned in conjunction <br> &nbsp; &nbsp; with  <a href="http://www.udacity.com" title="Udacity" style="vertical-align:bottom"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/udacity.png?raw=true" height="15px"></a>  and  <a href="http://grow.google" title="Grow with Google"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/gwg.png?raw=true" height="15px" style="vertical-align:middle"></a></div>
+
+    <div class="banner">
+            <a href="http://showmecoders.zyphyrmedia.org" title="Show Me Coders"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/showmecoders-logo1-white.png?raw=true" alt="Show-Me Coders"></a>
+    </div>
+
+    <div class="hamburgerMenu">
+        <button onclick="headerMenu()" class="menuButton"><img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRo%0D%0APSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0w%0D%0AIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4KICAgIDxwYXRoIGQ9Ik0zIDE4aDE4di0ySDN2Mnpt%0D%0AMC01aDE4di0ySDN2MnptMC03djJoMThWNkgzeiIvPgo8L3N2Zz4="></button>
+        <div id="menuOptions" class="menuContent">
+          <a href="./about.html" class="fullMenuLinks">About</a>
+          <a href="forum.html" class="fullMenuLinks">Forum</a>
+          <a href="inspiration.html" class="fullMenuLinks">Inspiration</a>
+        </div>
+    </div>
+
+
+  </div>
+
+  <!-- Full Size MENU -->
+
+  <div class="fullMenu">
+    <a href="./about.html" class="fullMenuLinks">About</a>
+    <a href="forum.html" class="fullMenuLinks">Forum</a>
+    <a href="inspiration.html" class="fullMenuLinks">Inspiration</a>
+  </div>
+
+  <div class="contDEVs">About</div>
+
+  <!-- DEV Boxes  -->
+
+  <div class="about-rows">
+
+    <div id="project-box" class="about-box">
+      <div id="project-title-box" class="about-title-box">
+        <h3 class="about-title">Our Project</h3>
+      </div>
+      <div class="about-text">
+        <p>
+          ShowMeCoders is a cooperative effort undertaken by Missourians participating in the
+          <a href="https://www.udacity.com/grow-with-google" target="_blank">
+            Grow With Google Scholarship Challenge</a> sponsored by
+          <a href="" target="_blank">Google</a> and offered through
+          <a href="https://www.udacity.com" target="_blank">Udacity</a>.
+        </p>
+        <p>
+          This project was created as part of this three month long program of instruction to demonstrate our grasp of the lessons
+          learned during the coursework and to gain the valuable skill of working as a team.
+        </p>
+      </div>
+    </div>
+
+    <div id="team-box" class="about-box">
+      <div id="team-title-box" class="about-title-box">
+        <h3 class="about-title">Our Team</h3>
+      </div>
+      <div class="contributors-wrapper">
+        <!--
+          Contributors dynamically inserted here by about.js using this
+          template:
+
+            <div class="contributor-left">
+              <span class="contributor-avatar"></span>
+              <span class="contributor-name">
+                <a href="https://github.com/jdmedlock" target="_blank">Jim Medlock</a>
+              </span>
+            </div>
+        -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- End DEV Boxes -->
+
+  <!-- GH Feed -->
+  <div id="feed"></div>
+
+
+  <!-- Footer -->
+  <div class="footer">
+    <a href="./about.html">
+      <strong>Copyright 2018 -</strong> Show-Me Coders
+    </a>
+  </div>
+
+</body>
+
+</html>

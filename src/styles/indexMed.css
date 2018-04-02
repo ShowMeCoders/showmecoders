@@ -12,22 +12,50 @@ html {
 }
 
 body{
-  font-family: 'Roboto',Tahoma,Verdana,sans-serif;
-  margin: 100px 0 50px 0;
+  font-family: Roboto, Tahoma, Verdana, sans-serif;
+  margin: 0 0 50px 0;
 }
+
+/* Oversizing catch-all */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+/* Remove underline from links */
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER & MENU */
 
 #header {
   position: fixed;
-  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   width: 100%;
   background: radial-gradient(#188ff4,#0062c1);
-  text-align: center;
-  font-size: 12px;
   color: #ffffff;
   z-index: 999;
-  vertical-align: middle;
   height: 50px;
-  display: inline-block;
+  margin-bottom: 80px;
 }
 
 #header p {
@@ -162,38 +190,50 @@ div.menu img {
   margin: 8px;
 }
 
+
 /* DEV BOXES */
+
+#devArea {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
 
 .contDEVs {
   width: 100%;
   height: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 40px;
-  opacity: 0.8;
   border-bottom: 2px solid #ddd;
-  background: #fff;
+  background-color: #ffffffc9;
+  background-image: url("../../assets/CSSTexture1.png");
   text-align: center;
   font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.devRows {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin: auto;
 }
 
 .devBox {
   display: flex;
   align-items: center;
-  background: radial-gradient(#188ff4, #0062c1);
-  opacity: 0.85;
-  width: 475px;
-  min-width: 400px;
-  height: 175px;
-  margin: 0 20px 40px 20px;
+  background-color: #0062c1d5;
+  background-image: url("../../assets/CSSTexture1.png");
+  min-width: 300px;
+  max-width: 400px;
+  height: 120px;
+  margin: 5px;
+  margin-bottom: 10px;
   border-radius: 15px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.devBox:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  opacity: 1;
 }
 
 .devNameBox {
@@ -215,14 +255,14 @@ div.menu img {
 }
 
 .devPic {
-  width: 150px;
-  height: 150px;
-  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   border: 1px solid #000;
   box-shadow: 1px 1px 6px 1px #000;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
@@ -231,34 +271,23 @@ li {
 }
 
 .devInfo {
-  align-self: flex-start;
-  width: 200px;
-  font-size: 18px;
+  align-self: center;
+  min-width: 120px;
+  max-width: 150px;
+  font-size: 14px;
+  margin-left: -25px;
+  margin-right: 5px;
 }
 
 .devInfoListItems {
   font-weight: bold;
 }
 
+
+/* GitHub FEED */
+
 #feed {
   margin: 50px 15% 25px 15%;
-}
-
-/* PORTFOLIO/BIO BOXES */
-
-div.portfolio {
-  background: radial-gradient(#6bbfff,#188ff4);
-  border: 0em;
-  padding: 25px 5%;
-  margin-bottom: 25px;
-  width: 100%;
-}
-
-#bio {
-  background: radial-gradient(#ff8977,#f4564b);
-  border: 0em;
-  padding: 25px 5% 25px 5%;
-  width: 100%;
 }
 
 /*!
