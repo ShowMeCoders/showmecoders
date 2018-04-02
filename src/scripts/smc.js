@@ -653,7 +653,6 @@ var templates = {
       '<div class="gha-header">\
                  <div class="gha-github-icon"><span class="octicon octicon-mark-github"></span></div>\
                  <div class="gha-user-info{{withoutName}}">{{{userNameLink}}}<p>{{{userLink}}}</p></div>\
-                 <div class="gha-gravatar">{{{gravatarLink}}}</div>\
                </div><div class="gha-push"></div>',
     Footer:
       '<div class="gha-footer">Public Activity <a href="https://github.com/caseyscarborough/github-activity" target="_blank">GitHub Activity Stream</a>',
@@ -725,7 +724,7 @@ GitHubActivity.feed({
   username: "showmecoders",
   repository: "showmecoders", // optional
   selector: "#feed",
-  limit: 10 // optional
+  limit: 5 // optional
 });
 
 /**
