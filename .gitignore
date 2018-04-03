@@ -57,3 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# Visual Studio Files
+.vs/VSWorkspaceState.json
+.vs/config/applicationhost.config
+.vs/showmecoders/v15/.suo
+.vs/slnx.sqlite
+
