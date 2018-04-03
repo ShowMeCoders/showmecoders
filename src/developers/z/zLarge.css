@@ -37,107 +37,55 @@ a:active {
 /* HEADER & MENU */
 
 #header {
+  position: fixed;
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  align-content: center;
   width: 100%;
-  max-width: 100%;
   background: radial-gradient(#188ff4,#0062c1);
-  text-align: center;
-  font-size: 12px;
   color: #ffffff;
-  z-index: 1;
   height: 50px;
-  padding: 3px 0 3px 0;
-}
-
-#header p {
-  vertical-align: middle;
-}
-
-#header a {
-  vertical-align: middle;
+  margin-bottom: 80px;
+  z-index: 999;
 }
 
 .banner {
-  vertical-align: middle;
-  margin: 5px;
-  max-width: 50%;
-  display: inline;
+  height: 45px;
+  margin: 2px;
 }
 
 .banner img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 90%;
+  margin-top: 2px;
 }
 
 .props {
   display: none;
-  float: left;
   margin-left: 10px;
+  padding-right:5%;
   max-width: 30%;
 }
 
-.menu {
-  height: inherit;
+.fullMenu {
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 55px;
+  padding-bottom: 2px;
+  background-color: #0062c1d5;
+  background-image: url("../../assets/CSSTexture1.png");
+  z-index: 888;
 }
 
-.menu img {
-  height: 60%;
-  filter: brightness(0) invert(1);
-}
-
-.menuButton {
-  height: inherit;
-  padding-right: 10px;
-  padding-left: 10px;
-  background-color: inherit;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.menuButton:hover, .menuButton:focus {
-  background-color: #e9e9e9;
-}
-
-.menuContent {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  right: 0;
-}
-
-.menuContent a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.menuContent a:hover {
-  background-color: #f4564b;
-}
-
-.show {display: block;}
-
-.navbar {
-  overflow: hidden;
-  padding: 10px;
-}
-
-.navbar a{
-  font-size: 16px;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  background-color: #f4564b;
+.fullMenuLinks {
+  color: #fff;
+  font-size: 13px;
+  padding: 8px;
 }
 
 /* MAIN CONTENT */

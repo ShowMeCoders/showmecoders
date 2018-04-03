@@ -20,18 +20,22 @@ img, embed, object, video {
 
 a:link {
   text-decoration: none;
+  color: inherit;
 }
 
 a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
   text-decoration: none;
+  color: inherit;
 }
 
 a:active {
   text-decoration: none;
+  color: inherit;
 }
 
 /* HEADER & MENU */
@@ -39,27 +43,25 @@ a:active {
 #header {
   position: fixed;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
+  align-content: center;
   width: 100%;
   background: radial-gradient(#188ff4,#0062c1);
   color: #ffffff;
-  z-index: 999;
   height: 50px;
   margin-bottom: 80px;
+  z-index: 999;
 }
 
 .banner {
   height: 45px;
   margin: 2px;
-  max-width: 50%;
-  margin-right: 11%;
 }
 
 .banner img {
   max-width: 100%;
   max-height: 90%;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 .props {
@@ -69,56 +71,41 @@ a:active {
   max-width: 30%;
 }
 
-.menu {
-  height: inherit;
-  position: relative;
-  list-style: none;
+.fullMenu {
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 55px;
+  padding-bottom: 2px;
+  background-color: #0062c1d5;
+  background-image: url("../../../assets/CSSTexture1.png");
+  z-index: 888;
+  color: #ffffff;
 }
 
-.menu img {
-  height: 40px;
-  filter: brightness(0) invert(1);
+.fullMenuLinks {
+  font-size: 14px;
+  padding: 8px;
 }
 
-.menuButton {
-  height: inherit;
-  padding-right: 10px;
-  padding-left: 10px;
-  background-color: inherit;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+/* PAGE STOPS / JUMPS */
+
+.pageStop {
+    transform: translateZ( 0 );
+    transition: transform 0.6s ease-in-out;
+    backface-visibility: hidden;
 }
 
-.menuContent {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 999;
-  right: 0;
+a[ id= "zInfo" ]:target ~ #contentBody div.pageStop {
+    transform: translateY( 20px );
 }
 
-.menuContent a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.show {display: block;}
-
-.navbar {
-  overflow: hidden;
-  padding: 10px;
-}
-
-.navbar a{
-  font-size: 16px;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
+a[ id= "familia" ]:target ~ #contentBody div.pageStop {
+    transform: translateY( 500px );
 }
 
 /* MAIN CONTENT */
@@ -135,7 +122,7 @@ a:active {
 
 /* DEV Info */
 
-.zInfo {
+#zInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,7 +139,7 @@ a:active {
   border-radius: 5px;
   border: 1px solid #000;
   box-shadow: 1px 1px 6px 1px #188ff4;
-  margin-top: 40px;
+  margin-top: 100px;
 }
 
 .connect {
@@ -168,7 +155,7 @@ a:active {
 }
 
 .logoBox {
-  width: 175px;
+  width: 200px;
   border-bottom: 1px solid #fff;
   border-top: 1px solid #fff;
   margin-bottom: 10px;
@@ -177,16 +164,16 @@ a:active {
 .logos {
   background-color: #ffffff2f;
   box-shadow: 1px 1px 15px #188ff4;
-  width: 35px;
-  height: 35px;
-  padding: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 8px;
   margin-bottom: 12px;
 }
 
 
 /* Page Layout */
 
-#devContentArea {
+#familia {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -194,6 +181,7 @@ a:active {
   flex-wrap: wrap;
   width: 100%;
   max-width: 100%;
+  margin-top: 120px;
   background-color: #ffffffe4;
 }
 
