@@ -597,7 +597,7 @@ span.gha-time {
 
 /* Original Footer idea from @cbracco https://codepen.io/cbracco/pen/zekgx?q=footer&limit=all&type=type-pens */
 
-#footer {
+.footer {
   min-height: 10px;
   max-height: 10px;
   width: 100%;
