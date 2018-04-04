@@ -1,70 +1,4 @@
 
-
-
-/* Generate DEV Boxes Dynamically From GH */
-
-/*
-$(document).ready(function() {
-  console.clear();
-
-  // Retrieve Repo & Contributor info from GitHub
-  fetch('https://api.github.com/repos/ShowMeCoders/showmecoders/contributors')
-  .then(response => response.json())
-  .then(data => {
-    var generateContributor =
-      '<div class="devBox"> \
-       <div class="devNameBox"> \
-          <h3 class="devName">$name$</h3> \
-       </div> \
-       <a class="devLinks" href="$profile$" target="_blank"> \
-        <img src="$avatar$" alt="$name$" class="devPic"> \
-          <ul class="devInfo"> \
-            <li><span class="devInfoListItems">GitHub:</span>$login$</li> \
-            <li><span class="devInfoListItems">Loc.:</span> St. Charles</li> \
-            <li><span class="devInfoListItems">Bio:</span> Experienced IT professional</li> \
-          </ul> \
-        </a> \
-      </div>';
-
-    let contributorInfo = '';
-    let currentContributor = '';
-    let contributors = [];
-
-    data.forEach(element => {
-      currentContributor = outlineContributor.replace('$profile$', element.html_url);
-      currentContributor = outlineContributor.replace('$login$', element.login);
-      currentContributor = outlineContributor.replace('$name$', element.login);
-      currentContributor = outlineContributor.replace('$avatar$', element.avatar_url);
-      contributorInfo += currentContributor;
-    });
-    $( ".devRows" ).html(contributorInfo);
-
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-
-});
-*/
-
-/*
-<div class="devBox"> \
- <div class="devNameBox"> \
-    <h3 class="devName">$name$</h3> \
- </div> \
- <a class="devLinks" href="$profile$" target="_blank"> \
-  <img src="$avatar$" alt="Jim" class="devPic"> \
-    <ul class="devInfo"> \
-      <li><span class="devInfoListItems">GitHub:</span>$login$</li> \
-      <li><span class="devInfoListItems">Loc.:</span> St. Charles</li> \
-      <li><span class="devInfoListItems">Bio:</span> Experienced IT professional</li> \
-    </ul> \
-  </a> \
-</div>
-*/
-
-
-
 /*  JS Kyle G found to activate and update GitHub Feed  */
 
 /*!
@@ -728,6 +662,32 @@ GitHubActivity.feed({
   limit: 10 // optional
 });
 
+function replacePlaceholder(placeholder, replacement, model) {
+  const replacementValue = replacement !== null ? replacement : 'N/a';
+  let placeholderCount = 0;
+  let lastPlaceholderPos = 0;
+  let placeholderPositions = [];
+
+  // Find all occurrances of the placeholder string in the model
+  const NOT_FOUND = -1;
+  while (true) {
+    let placeholderPos = model.indexOf(placeholder,lastPlaceholderPos);
+    if (placeholderPos === NOT_FOUND) {
+      break;
+    }
+    placeholderPositions.push(placeholderPos);
+    lastPlaceholderPos = ++placeholderPos;
+  }
+
+  // Replace the placeholder(s) with the replacement value
+  let updatedModel = model;
+  placeholderPositions.forEach(element => {
+    updatedModel = updatedModel.replace(placeholder, replacementValue);
+  });
+
+  return updatedModel;
+}
+
 /**
  * @description Generate the HTML required to display information for all
  * contributors to the ShowMeCoders GitHub repo.
@@ -771,13 +731,7 @@ function renderContributors(contributorHtml) {
       .then(response => response.json())
       .then(user => {
         // Cleanse the data prior to rendering the page
-        const avatar = user.avatar_url !== null ? user.avatar_url : 'N/a';
         let bio = user.bio !== null ? user.bio : 'N/a';
-        const location = user.location !== null ? user.location : 'N/a';
-        const login = user.login !== null ? user.login : 'N/a';
-        const profile = user.html_url !== null ? user.html_url : 'N/a';
-        const userName = user.name !== null ? user.name : 'N/a';
-
         const MAX_BIO_LENGTH = 50;
         if (bio.length > MAX_BIO_LENGTH) {
           let endPosition = bio.length;
@@ -792,13 +746,13 @@ function renderContributors(contributorHtml) {
         }
 
         // Replace placeholders with contributor-specific values
-        let currentContributor = contributorHtml
-        .replace('$avatar$', avatar)
-        .replace('$bio$', bio)
-        .replace('$location$', location)
-        .replace('$login$', login)
-        .replace('$profile$', profile)
-        .replace('$username$', userName);
+        let currentContributor = contributorHtml;
+        currentContributor = replacePlaceholder('$avatar$', user.avatar_url, currentContributor);
+        currentContributor = replacePlaceholder('$bio$', bio, currentContributor);
+        currentContributor = replacePlaceholder('$location$', user.location, currentContributor);
+        currentContributor = replacePlaceholder('$login$', user.login, currentContributor);
+        currentContributor = replacePlaceholder('$profile$', user.html_url, currentContributor);
+        currentContributor = replacePlaceholder('$username$', user.name, currentContributor);
         resultHtml.push(currentContributor);
       });
     });
