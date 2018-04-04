@@ -1,3 +1,4 @@
+
 .content-wrapper {
   display: flex;
   flex-direction: column;
@@ -16,7 +17,7 @@
   align-items: center;
   background-color: #0062c1d5;
   background-image: url("../../assets/CSSTexture1.png");
-  width: 40%;
+  width: 50%;
   height: auto;
   margin: 20px auto auto auto;
   border-radius: 15px;
@@ -25,26 +26,36 @@
 .content-title-wrapper {
   background-color: #000;
   width: 45px;
-  margin: 0 12px 0 0;
+  margin: 0 0 0 0;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  white-space: nowrap;
 }
 
 .content-title {
   position: relative;
-  top: 50%;
+  /*top: 50%;*/
   transform: rotate(-90deg);
   color: #fff;
   font-size: 18px;
   letter-spacing: 2px;
-  margin: 5px auto 5px auto;
+  margin: 0 0 0 0;
 }
 
 .content-area {
   align-self: center;
   width: 100%;
   font-size: 15px;
+  /*
   margin-left: -30px;
   margin-right: 10px;
   list-style: none;
+  */
+  margin: auto 10px auto 0;
+}
+
+.pic {
+  border: 1px solid #000;
+  box-shadow: 1px 1px 6px 1px #000;
+  margin: 3px 10px 3px 3px;
 }
