@@ -662,6 +662,13 @@ GitHubActivity.feed({
   limit: 10 // optional
 });
 
+/**
+ * @description Substitute placeholder strings with actual values
+ * @param {String} placeholder A placeholder string
+ * @param {String} replacement A replacement value for the placeholder
+ * @param {String} model A model containing both static text and placeholders
+ * @returns {String} A replacement model updated with the replacement values
+ */
 function replacePlaceholder(placeholder, replacement, model) {
   const replacementValue = replacement !== null ? replacement : 'N/a';
   let placeholderCount = 0;
