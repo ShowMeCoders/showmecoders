@@ -22,6 +22,8 @@ function adjustTitlePositions(boxId) {
 $(document).ready(function() {
 
   adjustTitlePositions('#about-box');
+  adjustTitlePositions('#family-box');
+  adjustTitlePositions('#chingu-box');
   adjustTitlePositions('#career-box');
 
 });
