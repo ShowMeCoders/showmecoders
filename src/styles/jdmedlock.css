@@ -1,0 +1,49 @@
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.content-box {
+  display: flex;
+  align-items: center;
+  background-color: #0062c1d5;
+  background-image: url("../../assets/CSSTexture1.png");
+  width: 50%;
+  height: auto;
+  margin: auto auto auto auto;
+  border-radius: 15px;
+}
+
+.content-title-wrapper {
+  background-color: #000;
+  width: 30px;
+  margin: 0 12px 0 0;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.content-title {
+  position: relative;
+  top: 52%;
+  transform: rotate(-90deg);
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin: auto auto auto auto;
+}
+
+.content-area {
+  align-self: center;
+  width: 100%;
+  font-size: 15px;
+  margin-left: -20px;
+  margin-right: 5px;
+}
