@@ -21,7 +21,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: auto auto auto 40%;
-  width: 60%;
+  width: 70%;
 }
 
 .content-box {
@@ -62,7 +62,11 @@
 }
 
 .pic {
+  display: block;
+  /*
   border: 1px solid #000;
   box-shadow: 1px 1px 6px 1px #000;
-  margin: 3px 10px 3px 3px;
+  */
+  background-size: contain;
+  margin: auto;
 }
