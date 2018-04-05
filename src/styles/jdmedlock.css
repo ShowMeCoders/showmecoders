@@ -1,12 +1,27 @@
 
+/* Content Classes */
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   width: 100%;
   height: auto;
   margin: auto auto auto auto;
   padding-top: 100px;
+}
+
+.major-topics {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto 40% auto auto;
+  width: 60%;
+}
+
+.minor-topics {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto auto auto 40%;
+  width: 60%;
 }
 
 .content-box {
@@ -14,7 +29,7 @@
   align-items: center;
   background-color: #0062c1d5;
   background-image: url("../../assets/CSSTexture1.png");
-  width: 45%;
+  width: 60%;
   height: auto;
   margin: 20px auto auto auto;
   margin-left: auto;
@@ -32,7 +47,6 @@
 
 .content-title {
   position: relative;
-  /*top: 50%;*/
   transform: rotate(-90deg);
   color: #fff;
   font-size: 18px;
@@ -44,11 +58,6 @@
   align-self: center;
   width: 100%;
   font-size: 15px;
-  /*
-  margin-left: -30px;
-  margin-right: 10px;
-  list-style: none;
-  */
   margin: auto 10px auto 0;
 }
 

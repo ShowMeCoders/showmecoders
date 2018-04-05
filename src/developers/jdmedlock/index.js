@@ -25,5 +25,8 @@ $(document).ready(function() {
   adjustTitlePositions('#family-box');
   adjustTitlePositions('#chingu-box');
   adjustTitlePositions('#career-box');
+  adjustTitlePositions('#pam-box');
+  adjustTitlePositions('#devgaido-box');
+  adjustTitlePositions('#ideanebulae-box');
 
 });
