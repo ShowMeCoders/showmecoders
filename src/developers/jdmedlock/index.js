@@ -28,6 +28,7 @@ $(document).ready(function() {
   adjustContainer('#family-box');
   adjustContainer('#chingu-box');
   adjustContainer('#career-box');
+  adjustContainer('#pm-box');
   adjustContainer('#projects-box');
   adjustContainer('#pam-box');
   adjustContainer('#devgaido-box');
