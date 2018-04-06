@@ -9,12 +9,9 @@ function adjustContainer(boxId) {
   const titleLth = parseInt($( boxId + " .title" ).width());
   console.log(`${boxId} contentHeight:${contentHeight} titleLth:${titleLth}`);
   let newHeight = contentHeight < titleLth ? titleLth : contentHeight;
-  newHeight += 20;
+  newHeight += 40;
   console.log(`newHeight: ${newHeight}`);
   $( boxId + " .content-title-wrapper" ).css( "height", newHeight+'px');
-  //$( boxId + " .content-title" ).css( "top", ((newHeight/2)+((newHeight-titleLth)))+'px');
-  $( boxId + " .content-title" ).css( "top", '68%');
-
 
   const backgroundUrl = $( boxId + " .pic").attr("src");
   if (backgroundUrl !== undefined) {
