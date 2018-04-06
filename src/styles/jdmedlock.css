@@ -73,3 +73,7 @@
   background-position: center;
   background-size: cover;
 }
+
+.plain {
+  list-style: none;
+}
