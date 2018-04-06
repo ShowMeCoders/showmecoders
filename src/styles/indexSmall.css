@@ -93,64 +93,9 @@ a:active {
 
 .fullMenuLinks {
   color: #fff;
-  font-size: 13px;
-  padding: 8px;
+  font-size: 14px;
+  padding: 6px;
 }
-
-/* Temp remove Hambugrger MENU
-.hamburgerMenu {
-  position: absolute;
-  left: 85%;
-  height: inherit;
-  list-style: none;
-}
-
-.hamburgerMenu img {
-  height: 40px;
-  filter: brightness(0) invert(1);
-}
-
-.menuButton {
-  height: inherit;
-  padding-right: 10px;
-  padding-left: 10px;
-  background-color: inherit;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.menuContent {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 999;
-  right: 0;
-}
-
-.menuContent a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.show {display: block;}
-
-.navbar {
-  overflow: hidden;
-  padding: 10px;
-}
-
-.navbar a{
-  font-size: 16px;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-*/
 
 
 /* WELCOME */
@@ -192,6 +137,8 @@ a:active {
 #ourTeam {
   display: flex;
   flex-flow: row wrap;
+  justify-content:center;
+  align-items: center;
   width: 100%;
 }
 
@@ -629,6 +576,7 @@ span.gha-time {
 /* Original Footer idea from @cbracco https://codepen.io/cbracco/pen/zekgx?q=footer&limit=all&type=type-pens */
 
 .footer {
+  z-index: 1;
   min-height: 10px;
   max-height: 10px;
   width: 100%;
@@ -636,8 +584,8 @@ span.gha-time {
   bottom: 0;
   position: fixed;
   text-align: center;
+  margin-top: 120px;
   font-size: 12px;
   color: #fff;
   background: radial-gradient(#188ff4, #0062c1);
-  z-index: 1;
 }
