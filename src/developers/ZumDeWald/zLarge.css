@@ -4,8 +4,8 @@
 body{
   margin: 0px;
   max-width: 100%;
-  font-family: "Roboto",Tahoma,Verdana,sans-serif;
-  background: url('https://raw.githubusercontent.com/ShowMeCoders/showmecoders/development/assets/SMC_BG.png') fixed no-repeat;
+  font-family: Roboto, Tahoma, Verdana, sans-serif;
+  background: url('../../../assets/SMC_BG.png') fixed no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #ffffff;
@@ -141,12 +141,13 @@ a:active {
 }
 
 .logos {
-  background-color: #ffffff2f;
-  box-shadow: 1px 1px 15px #188ff4;
-  width: 35px;
-  height: 35px;
-  padding: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 8px;
   margin-bottom: 12px;
+  background-color: #ffffff2f;
+  background-image: url("../../../assets/CSSTexture1.png");
+  box-shadow: 1px 1px 15px #188ff4;
 }
 
 /* Page Layout */
@@ -199,17 +200,18 @@ a:active {
 
 /* FOOTER */
 
-#footer {
-  min-height: 10px;
-  max-height: 10px;
+.footer {
+  z-index: 1;
+  min-height: 15px;
+  max-height: 15px;
   width: 100%;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   bottom: 0;
   position: fixed;
   text-align: center;
+  font-size: 18px;
   color: #fff;
   background: radial-gradient(#188ff4, #0062c1);
-  z-index: 1;
 }
 
 
