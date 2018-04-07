@@ -79,3 +79,15 @@
 .plain {
   list-style: none;
 }
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+
+.icon {
+  font-size: 36px;
+  margin: auto 20px 0 auto;
+}
