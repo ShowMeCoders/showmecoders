@@ -1,17 +1,19 @@
 
-/* Header and shrink/grow tagline from Nick  */
 
-function headerMenu() {
-    document.getElementById("menuOptions").classList.toggle("show");
-}
+/* Hover over book pics */
+$( document ).ready( function () {
 
-window.onclick=function(event) {
-    if (!event.target.matches('.menuButton')) {
-        var dropdowns = document.getElementsByClassName("menuContent");
-        var i;
-        for (i=0; i<dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
+const bookPic = $("img.bookPic");
 
-        }
-    }
-}
+   bookPic.mouseenter(function (evt) {
+   $(evt.target).css({"box-shadow": "1px 1px 5px #000"});
+   });
+
+   bookPic.mouseleave(function (evt) {
+   $(evt.target).css({"box-shadow": ""});
+   });
+
+
+// alert(bookPic.length);
+
+});
