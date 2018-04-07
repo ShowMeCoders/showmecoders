@@ -217,7 +217,7 @@ html {
   font-family: 'Poppins', 'Roboto', Tahoma, Verdana, sans-serif;
 }
 
-.introContainer {
+.topContainer {
   order: 1;
   width: 100%;
   background: orange; 
@@ -228,7 +228,6 @@ html {
   width: 100%;
   padding: 15px 15px 10px;
   vertical-align: middle;
-  float: right;
 }
 
 .introMain {
@@ -255,16 +254,22 @@ html {
 
 /* Stylistics */
 
-/* PASTE IN THE FOLLOWING INTO PAGES
-
-<style>
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-</style>
-
-*/
-
 h1 {
   font-weight: bold;
   text-align: center;
   font-size: 4.5vw;
+}
+
+.social img {
+  float: right;
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+}
+
+#homeLogo {
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  padding: 5px;
 }
