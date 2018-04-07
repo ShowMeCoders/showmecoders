@@ -210,25 +210,31 @@ html {
 
 /* Flexbox */
 
+
 .container {
   display: flex;
   width: 100%;
   flex-direction: column;
   font-family: 'Poppins', 'Roboto', Tahoma, Verdana, sans-serif;
+  padding-top: 89px;
 }
 
-.introContainer {
+.topContainer {
   order: 1;
   width: 100%;
-  background: orange; 
+  height: 75%;
+  min-height: 550px;
+  background: url("../images/nickBG.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;; 
 }
 
 .introHeader {
   order: 2;
   width: 100%;
   padding: 15px 15px 10px;
-  vertical-align: middle;
-  float: right;
 }
 
 .introMain {
@@ -248,23 +254,32 @@ html {
   background: green;
 }
 
-.nickspicks {
+.nicksPicks {
   order: 6;
   width: 100%;
+  background: red;
 }
 
 /* Stylistics */
-
-/* PASTE IN THE FOLLOWING INTO PAGES
-
-<style>
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-</style>
-
-*/
 
 h1 {
   font-weight: bold;
   text-align: center;
   font-size: 4.5vw;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  color: #ffffff;
 }
+
+.social {
+  float: right;
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.logo {
+ display: inline-block;
+ vertical-align: middle;

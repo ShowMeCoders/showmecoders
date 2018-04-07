@@ -4,11 +4,24 @@
 
 <title>Show-Me Coders||A Showcase of Skills</title>    
 <!--INSERT CSS-->
+<!--fonts-->
 
-<link rel="stylesheet" type="text/css" href="../../styles/nick.css">
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins');
+    @import url('https://fonts.googleapis.com/css?family=Gormorant+Garamond');
+</style>
+
+<!--Responsive Sheets-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" media="screen and (max-width:400px)" href="css/nickSmall.css">
+<link rel="stylesheet" type="text/css" media="screen and (min-width:401px) and (max-width:800px)" href="css/nickMed.css">
+<link rel="stylesheet" type="text/css" media="screen and (min-width:801px)" href="css/nickLarge.css">
 <!--INSERT SCRIPTS-->
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant+Garamond">
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="../../scripts/smc.js"></script>
 
@@ -18,59 +31,83 @@
 
 
 
-<div id="header">
-    
+        <div id="header">
 
-    <div class="props"><p>A showcase of skills learned in conjunction<br>with  <a href="http://www.udacity.com" title="Udacity" style="vertical-align:bottom"><img src="../../../assets/udacity.png" height="15px"></a>  and  <a href="http://grow.google" title="Grow with Google"><img src="../../../assets/gwg.png" height="15px" style="vertical-align:middle"></a></div>
 
-    <div class="banner">
-            <a href="http://showmecoders.zyphyrmedia.org" title="Show Me Coders"><img src="../../../assets/showmecoders-logo1-white.png" alt="Show-Me Coders"></a>
-    </div>
-    
-    <div class="menu">
-        <button onclick="headerMenu()" class="menuButton"><img src="../../../assets/menuIcon.png"></button>
-        <div id="menuOptions" class="menuContent">
-            <a href="../../blog.html">Blog</a>
-            <a href="../../forum.html">Forum</a>
-            <a href="../../inspiration.html">Inspiration</a>
-        </div>
- 
-    </div>
-    
-
-</div>
+                <div class="props"><p>A showcase of skills learned in conjunction <br> &nbsp; &nbsp; with  <a href="http://www.udacity.com" title="Udacity" style="vertical-align:bottom" target="_blank"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/udacity.png?raw=true" height="15px"></a>  and  <a href="http://grow.google" title="Grow with Google" target="_blank"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/gwg.png?raw=true" height="15px"></a></div>
+            
+                <div class="banner">
+                        <a href="http://showmecoders.zyphyrmedia.org" title="Show Me Coders"><img src="https://github.com/ShowMeCoders/showmecoders/blob/development/assets/showmecoders-logo1-white.png?raw=true" alt="Show-Me Coders"></a>
+                </div>
+            
+            <!-- Temp Remove Hamburger MENU   * REMOVE once menu is set *
+                <div class="hamburgerMenu">
+                    <button onclick="headerMenu()" class="menuButton"><img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRo%0D%0APSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0w%0D%0AIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4KICAgIDxwYXRoIGQ9Ik0zIDE4aDE4di0ySDN2Mnpt%0D%0AMC01aDE4di0ySDN2MnptMC03djJoMThWNkgzeiIvPgo8L3N2Zz4="></button>
+                    <div id="menuOptions" class="menuContent">
+                      <a href="forum.html" class="fullMenuLinks">Forum</a>
+                      <a href="inspiration.html" class="fullMenuLinks">Inspiration</a>
+                    </div>
+                  Temp Remove Hamburger MENU     -->
+            
+                </div>
+            
+            
+            </div>
+            
+            
+            <!-- Full Size MENU -->
+            
+            <div class="fullMenu">
+              <a href="forum.html" class="fullMenuLinks">Forum</a>
+              <a href="inspiration.html" class="fullMenuLinks">Inspiration</a>
+            
+            </div>
+            
 
   
 
     
 
-<div id="landing">
+<div class="container">
 
-    <!--<center><div class="devBox">
-        <div class="devNameBox">
-            <h3 class="devName">Nick</h3>
+    <div class="topContainer">
+
+        <div class="introHeader">
+
+            <center><a class="logo" href="../nickhaynes/index.html"><img src="images/weblogoWhite.png" width="40px"></a></center>
+
+            <a class="social" href="http://www.linkedin.com/in/nickhaynes"><img src="images/linkedin-box.svg" width="24px" class="social"></a>
+            <a class="social" href="http://www.twitter.com"><img src="images/twitter-box.svg" width="24px" class="social"></a>
+            <a class="social" href="http://www.facebook.com/j.n.haynes"><img src="images/facebook-box.svg" width="24px" class="social"></a>
+        
         </div>
-        <img src="https://avatars1.githubusercontent.com/u/36779922?s=400&v=4" alt="Nick" class="devPic">
-            <ul class="devInfo">
-                <li><span class="devInfoListItems">GitHub:</span> nickhaynes</li>
-                <li><span class="devInfoListItems">Location:</span> America</li>
-                <li><span class="devInfoListItems">Bio:</span> Former politico and aspiring developer.</li>
-    </div></center>-->
 
-    <div id="personalHeader">
-        <a href="../nick/index.html"><img src="../nick/images/personalLogo.png" width="75px" class="logo"></a>
+        <div class="introMain">
 
-            <a href="http://www.linkedin.com/in/nickhaynes"><img src="../nick/images/linkedin-box.svg" width="36px" class="social"></a>
-            <a href="http://www.twitter.com"><img src="../nick/images/twitter-box.svg" width="36px" class="social"></a>
-            <a href="http://www.facebook.com/j.n.haynes"><img src="../nick/images/facebook-box.svg" width="36px" class="social"></a>
+            <h1>Freelance web developer.<br>Consultant.<br>Family man.</h1>
+
+        </div>
 
     </div>
-    <div></div>
 
-    <div id="headline">
+    <div class="portfolio">
 
-        <h1>Freelance web developer.<br>Consultant.<br>Family man.</h1>
+        <p>Spaceholder.<br>Spaceholder.<br>Spaceholder.</p>
 
+    </div>
+
+    <div class="aboutNick">
+
+        <p>Spaceholder.<br>Spaceholder.<br>Spaceholder.</p>
+    
+    </div>
+
+    <div class="nicksPicks">
+
+        <p>Spaceholder.<br>Spaceholder.<br>Spaceholder.</p>
+        
+    </div>
+                
     </div>
 </div>
 
@@ -78,7 +115,10 @@
 
     
 
-<div id="footer">Copyright 2018 Show Me Coders</div>
+<div class="footer">
+        <strong>Copyright 2018 -</strong> Show-Me Coders
+      </div>
+    
 
 </body>
 </html>
