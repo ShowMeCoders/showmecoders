@@ -70,6 +70,8 @@
   margin: auto;
   width: auto;
   height: auto;
+  max-width: 126px;
+  max-height: auto;
   background-position: center;
   background-size: cover;
 }
