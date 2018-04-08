@@ -196,19 +196,12 @@ a:active {
 
 /* NICK'S SPECIFIC CSS */
 
-/* html {
-  background: url("../../assets/SMC_BG.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
-
 html {
   background: #f6f6f6;
 }
 
 /* Flexbox */
+
 
 .container {
   display: flex;
@@ -220,14 +213,19 @@ html {
 .topContainer {
   order: 1;
   width: 100%;
-  background: orange; 
+  height: 200vw;
+  background: url("../images/nickBGbig.jpg") no-repeat center center ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;; 
 }
 
 .introHeader {
   order: 2;
   width: 100%;
-  padding: 15px 15px 10px;
-  vertical-align: middle;
+  align-content: center;
+  padding-top: 89px;
 }
 
 .introMain {
@@ -238,38 +236,72 @@ html {
 .portfolio {
   order: 4;
   width: 100%;
-  background: yellow;
+  background-image: url("../images/portfolioiconsmall.jpg");
+  background-size: 100%;
+  background-position-y: 75%;
+  background-color: #dd0000;
+  background-blend-mode: multiply;
 }
 
 .aboutNick {
   order: 5;
   width: 100%;
-  background: green;
+  background-image: url("../images/aboutIconSmall.jpg");
+  background-size: 100%;
+  background-position-y: 75%;
+  background-color: green;
+  background-blend-mode: multiply;
 }
 
-.nickspicks {
+.nicksPicks {
   order: 6;
   width: 100%;
+  background-image: url("../images/inspireIconSmall.jpg");
+  background-size: 100%;
+  background-position-y: 75%;
+  background-color:orange;
+  background-blend-mode: multiply;
 }
 
 /* Stylistics */
 
 h1 {
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
   font-size: 4.5vw;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  color: #ffffff;
 }
 
-.social img {
+.social {
   float: right;
-  width: 24px;
-  height: 24px;
-  padding: 5px;
+  width: 30px;
+  height: 30px;
+  padding: 5px 10px 5px 5px;
+  display: inline-block;
+  vertical-align: top;
 }
 
-#homeLogo {
+.logo {
+ display: inline-block;
+ vertical-align: middle;
+ width: 15%;
+ margin-left: 42.5%;
+}
+
+h2 {
+  font-weight: bolder;
   text-align: center;
-  width: 36px;
-  height: 36px;
-  padding: 5px;
+  font-size: 4.0.5vw;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 100;
+  vertical-align: bottom;
+  font-size: 14px;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  color: #ffffff;
 }
