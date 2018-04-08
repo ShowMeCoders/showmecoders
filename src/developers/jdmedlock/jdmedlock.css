@@ -28,10 +28,10 @@
   display: flex;
   align-items: center;
   background-color: #0062c1d5;
-  background-image: url("../../assets/CSSTexture1.png");
+  background-image: url("../../../assets/CSSTexture1.png");
   width: 60%;
   height: auto;
-  margin: 20px auto auto auto;
+  margin: 20px auto 0 auto;
   margin-left: auto;
   border-radius: 15px;
 }
@@ -62,18 +62,21 @@
   align-self: center;
   width: 100%;
   font-size: 15px;
-  margin: auto auto auto auto;
+  margin: auto 15px auto 0;
 }
 
 .pic {
-  /* display: inline-block; */
-  margin: auto;
-  width: auto;
-  height: auto;
-  max-width: 126px;
-  max-height: auto;
+  position: relative;
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  margin: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+  min-width: 130px;
+  max-width: 130px;
+  max-height: auto;
+  object-fit: contain;
 }
 
 .plain {
