@@ -5,7 +5,7 @@
 
 body{
   font-family: Roboto, Tahoma, Verdana, sans-serif;
-  margin: 0 0 50px 0;
+  margin: 0px;
 }
 
 /* Oversizing catch-all */
@@ -196,14 +196,6 @@ a:active {
 
 /* NICK'S SPECIFIC CSS */
 
-/* html {
-  background: url("../../assets/SMC_BG.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
-
 html {
   background: #f6f6f6;
 }
@@ -216,15 +208,13 @@ html {
   width: 100%;
   flex-direction: column;
   font-family: 'Poppins', 'Roboto', Tahoma, Verdana, sans-serif;
-  padding-top: 89px;
 }
 
 .topContainer {
   order: 1;
   width: 100%;
-  height: 75%;
-  min-height: 550px;
-  background: url("../images/nickBG.jpg") no-repeat center center fixed;
+  height: 200vw;
+  background: url("../images/nickBGbig.jpg") no-repeat center center ;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -234,7 +224,8 @@ html {
 .introHeader {
   order: 2;
   width: 100%;
-  padding: 15px 15px 10px;
+  align-content: center;
+  padding-top: 89px;
 }
 
 .introMain {
@@ -245,25 +236,37 @@ html {
 .portfolio {
   order: 4;
   width: 100%;
-  background: yellow;
+  background-image: url("../images/portfolioIconSmall.jpg");
+  background-size: 100%;
+  background-position-y: 75%;
+  background-color: #dd0000;
+  background-blend-mode: multiply;
 }
 
 .aboutNick {
   order: 5;
   width: 100%;
-  background: green;
+  background-image: url("../images/aboutIconSmall.jpg");
+  background-size: 100%;
+  background-position-y: 75%;
+  background-color: green;
+  background-blend-mode: multiply;
 }
 
 .nicksPicks {
   order: 6;
   width: 100%;
-  background: red;
+  background-image: url("../images/inspireIconSmall.jpg");
+  background-size: 100%;
+  background-position-y: 75%;
+  background-color:orange;
+  background-blend-mode: multiply;
 }
 
 /* Stylistics */
 
 h1 {
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
   font-size: 4.5vw;
   font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
@@ -272,10 +275,9 @@ h1 {
 
 .social {
   float: right;
-  width: 24px;
-  height: 24px;
-  padding: 5px;
-  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  padding: 5px 10px 5px 5px;
   display: inline-block;
   vertical-align: top;
 }
@@ -283,3 +285,23 @@ h1 {
 .logo {
  display: inline-block;
  vertical-align: middle;
+ width: 15%;
+ margin-left: 42.5%;
+}
+
+h2 {
+  font-weight: bolder;
+  text-align: center;
+  font-size: 4.0.5vw;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 100;
+  vertical-align: bottom;
+  font-size: 14px;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
