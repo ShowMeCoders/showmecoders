@@ -1,5 +1,17 @@
 
-/*  JS Kyle G found to activate and update GitHub Feed  */
+
+const root = $("html, body");
+
+// Smooth Scroll between anchor tag links
+ $("a[href^='#']").click(function(evt) {
+   evt.preventDefault();
+
+   root.animate({
+     scrollTop: $($.attr(this, "href")).offset().top
+   }, 800)
+ });
+
+/*  JS Kyle G found to activate and update GitHub Feed
 
 /*!
  * GitHub Activity Stream - v0.1.4 - 10/7/2015
@@ -693,6 +705,8 @@ function replacePlaceholder(placeholder, replacement, model) {
 
   return updatedModel;
 }
+
+
 
 /**
  * @description Generate the HTML required to display information for all
