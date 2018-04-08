@@ -25,4 +25,32 @@ $(document).ready(function() {
   $( "div .content-box" ).each(function( index, element ) {
     adjustContainer(`#${$( element ).attr( 'id' )}`);
   });
+  const LINE_WIDTH = 25;
+  const aboutBox = $('#about-box .pic');
+  const startX = aboutBox[0].offsetLeft + (aboutBox[0].offsetWidth/2);
+  const startY = aboutBox[0].offsetTop + aboutBox[0].offsetHeight;
+
+  const ossBox = $('#oss-box .pic');
+  const endX = ossBox[0].offsetLeft + (ossBox[0].offsetWidth / 2);
+  const endY = ossBox[0].offsetTop;
+
+  const c = $('<canvas/>').attr({
+    'width': `${LINE_WIDTH}`,
+    'height': endY - startY
+  }).css({
+      'position': 'absolute',
+      'left': `${startX-(LINE_WIDTH/2)}`,
+      'top': startY,
+      'width': `'${LINE_WIDTH}px'`,
+      'background-color': '#974B4B',
+      'border-color': 'black',
+      'border-width': 'thin',
+      'z-index': -1
+  }).appendTo($('body'))[0].getContext('2d');
+  c.strokeStyle = '#FF0000';
+  c.lineWidth = LINE_WIDTH;
+  c.beginPath();
+  c.moveTo(startX-(LINE_WIDTH/2), startY);
+  c.lineTo(endX-(LINE_WIDTH/2), endY);
+  c.stroke();
 });
