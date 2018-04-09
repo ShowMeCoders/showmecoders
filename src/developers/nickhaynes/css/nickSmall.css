@@ -233,17 +233,17 @@ html {
   width: 100%;
 }
 
-.portfolio {
+.portfolioSmall {
   order: 4;
   width: 100%;
   background-image: url("../images/portfolioiconsmall.jpg");
   background-size: 100%;
   background-position-y: 75%;
-  background-color: #dd0000;
+  background-color: #0000f7;
   background-blend-mode: multiply;
 }
 
-.aboutNick {
+.aboutNickSmall {
   order: 5;
   width: 100%;
   background-image: url("../images/aboutIconSmall.jpg");
@@ -253,7 +253,7 @@ html {
   background-blend-mode: multiply;
 }
 
-.nicksPicks {
+.nicksPicksSmall {
   order: 6;
   width: 100%;
   background-image: url("../images/inspireIconSmall.jpg");
@@ -261,6 +261,30 @@ html {
   background-position-y: 75%;
   background-color:orange;
   background-blend-mode: multiply;
+}
+
+.portfolioMed {
+  display: none;
+}
+
+.aboutNickMed {
+  display: none;
+}
+
+.nicksPicksMed {
+  display: none;
+}
+
+.portfolioLarge {
+  display: none;
+}
+
+.aboutNickLarge {
+  display: none;
+}
+
+.nicksPicksLarge {
+  display: none;
 }
 
 /* Stylistics */

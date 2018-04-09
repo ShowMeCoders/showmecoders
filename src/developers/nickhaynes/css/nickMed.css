@@ -233,19 +233,82 @@ html {
   width: 100%;
 }
 
-.portfolio {
+.portfolioSmall {
+  display: none;
+}
+
+.portfolioSmall a {
+  display: none;
+}
+
+.aboutNickSmall {
+  display: none;
+}
+
+.aboutNickSmall a {
+  display: none;
+}
+
+.nicksPicksSmall {
+  display: none;
+}
+
+.aboutNickSmall a {
+  display: none;
+}
+
+.portfolioMed {
   order: 4;
   width: 100%;
 }
 
-.aboutNick {
+.portfolioMed img {
+  float: left;
+  width: 35%;
+  height: auto;
+  padding: 35px 35px 15px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.aboutNickMed {
   order: 5;
   width: 100%;
 }
 
-.nicksPicks {
+.aboutNickMed img {
+  float: left;
+  width: 35%;
+  height: auto;
+  padding: 15px 35px 15px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.nicksPicksMed {
   order: 6;
   width: 100%;
+}
+
+.nicksPicksMed img {
+  float: left;
+  width: 35%;
+  height: auto;
+  padding: 15px 35px 35px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.portfolioLarge {
+  display: none;
+}
+
+.aboutNickLarge {
+  display: none;
+}
+
+.nicksPicksLarge {
+  display: none;
 }
 
 /* Stylistics */
@@ -270,47 +333,22 @@ h1 {
 .logo {
  display: inline-block;
  vertical-align: middle;
- width: 15%;
- margin-left: 42.5%;
+ width: 8%;
+ margin-left: 46%;
 }
 
 h2 {
   font-weight: bolder;
   text-align: center;
-  font-size: 4.0.5vw;
+  font-size: 3.5vw;
   font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
-  color: #ffffff;
+  color: #000000;
 }
 
 h3 {
   text-align: center;
   font-weight: 100;
-  vertical-align: bottom;
-  font-size: 14px;
+  font-size: 2.25vw;
   font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
-  color: #ffffff;
-}
-
-.portfolioWrapper {
-  width: 80%;
-  height: auto;
-  content: url("../images/portfolioIconSmall.jpg");
-  background-color: #f6f6f6;
-  color: black;
-}
-
-.aboutWrapper {
-  width: 80%;
-  height: auto;
-  content: url("../images/aboutIconSmall.jpg");
-  background-color: #f6f6f6;
-  color: black;
-}
-
-.nicksPicksWrapper {
-  width: 80%;
-  height: auto;
-  content: url("../images/inspireIconSmall.jpg");
-  background-color: #f6f6f6;
-  color: black;
+  color: #000000;
 }

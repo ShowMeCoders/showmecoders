@@ -206,14 +206,15 @@ html {
 .container {
   display: flex;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   font-family: 'Poppins', 'Roboto', Tahoma, Verdana, sans-serif;
 }
 
 .topContainer {
   order: 1;
   width: 100%;
-  height: 200vw;
+  height: 100vw;
   background: url("../images/nickBGbig.jpg") no-repeat center center ;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -233,34 +234,85 @@ html {
   width: 100%;
 }
 
-.portfolio {
+.portfolioSmall {
+  display: none;
+}
+
+.portfolioSmall a {
+  display: none;
+}
+
+.aboutNickSmall {
+  display: none;
+}
+
+.aboutNickSmall a {
+  display: none;
+}
+
+.nicksPicksSmall {
+  display: none;
+}
+
+.nicksPicksSmall a {
+  display: none;
+}
+
+.portfolioMed {
+  display: none;
+}
+
+.aboutNickMed {
+  display: none;
+}
+
+.nicksPicksMed {
+  display: none;
+}
+
+.portfolioLarge {
   order: 4;
-  width: 100%;
-  background-image: url("../images/portfolioiconsmall.jpg");
-  background-size: 100%;
-  background-position-y: 75%;
-  background-color: #dd0000;
-  background-blend-mode: multiply;
+  width: 33.3%;
 }
 
-.aboutNick {
+.portfolioLarge img {
+  width: 85%;  
+  height: auto;
+  padding:15px 0px;
+  margin-left:7.5%;
+  margin-right: 7.5%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.aboutNickLarge {
   order: 5;
-  width: 100%;
-  background-image: url("../images/aboutIconSmall.jpg");
-  background-size: 100%;
-  background-position-y: 75%;
-  background-color: green;
-  background-blend-mode: multiply;
+  width: 33.4%;
 }
 
-.nicksPicks {
+.aboutNickLarge img {
+  width: 85%;
+  height: auto;
+  padding:15px 0px;
+  margin-left:7.5%;
+  margin-right: 7.5%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.nicksPicksLarge {
   order: 6;
-  width: 100%;
-  background-image: url("../images/inspireIconSmall.jpg");
-  background-size: 100%;
-  background-position-y: 75%;
-  background-color:orange;
-  background-blend-mode: multiply;
+  width: 33.3%;
+}
+
+.nicksPicksLarge img {
+  width: 85%;
+  height: auto;
+  padding:15px 0px;
+  margin-left:7.5%;
+  margin-right: 7.5%;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 /* Stylistics */
@@ -285,8 +337,8 @@ h1 {
 .logo {
  display: inline-block;
  vertical-align: middle;
- width: 15%;
- margin-left: 42.5%;
+ width: 6%;
+ margin-left: 47%;
 }
 
 h2 {
@@ -294,7 +346,7 @@ h2 {
   text-align: center;
   font-size: 4.0.5vw;
   font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
-  color: #ffffff;
+  color: #000000;
 }
 
 h3 {
@@ -303,5 +355,5 @@ h3 {
   vertical-align: bottom;
   font-size: 14px;
   font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
-  color: #ffffff;
+  color: #000000;
 }
