@@ -1,3 +1,4 @@
+const CONNECTOR_WIDTH = 25;
 
 /**
  * @description Adjust the title wrapper height and center the title based on
@@ -21,36 +22,92 @@ function adjustContainer(boxId) {
   }
 }
 
-$(document).ready(function() {
-  $( "div .content-box" ).each(function( index, element ) {
-    adjustContainer(`#${$( element ).attr( 'id' )}`);
-  });
-  const LINE_WIDTH = 25;
-  const aboutBox = $('#about-box .pic');
-  const startX = aboutBox[0].offsetLeft + (aboutBox[0].offsetWidth/2);
-  const startY = aboutBox[0].offsetTop + aboutBox[0].offsetHeight;
+/**
+ * @description Draw a straight line connecting two major topic boxes
+ * @param {Object} startTopic DOM node of the starting topic box
+ * @param {Object} endTopic DOM node of the ending topic box
+ */
+function connectMajorTopics(startTopic, endTopic) {
+  const startX = startTopic[0].offsetLeft + (startTopic[0].offsetWidth / 2);
+  const startY = startTopic[0].offsetTop + startTopic[0].offsetHeight;
+  const endX = endTopic[0].offsetLeft + (endTopic[0].offsetWidth / 2);
+  const endY = endTopic[0].offsetTop;
 
-  const ossBox = $('#oss-box .pic');
-  const endX = ossBox[0].offsetLeft + (ossBox[0].offsetWidth / 2);
-  const endY = ossBox[0].offsetTop;
+  drawLine(startX-CONNECTOR_WIDTH, startY, endX, endY, '#974B4B');
+}
 
+/**
+ * @description Draw a "L" line connecting a major topic box to a minor
+ * topic box
+ * @param {Object} startTopic DOM node of the major topic box
+ * @param {Object} endTopic DOM node of the minor topic box
+ */
+function connectMinorTopic(majorTopic, minorTopic) {
+  // Calculate vertical line segment start & end points
+  const seg1StartX = majorTopic[0].offsetLeft + (majorTopic[0].offsetWidth / 5);
+  const seg1StartY = majorTopic[0].offsetTop + majorTopic[0].offsetHeight;
+  const seg1EndX = seg1StartX;
+  const seg1EndY = minorTopic[0].offsetTop + (minorTopic[0].offsetHeight / 2);
+
+  // Calculate horizontal line segment end points
+  const seg2EndX = minorTopic[0].offsetLeft;
+  const seg2EndY = seg1EndY;
+
+  drawLine(seg1StartX, seg1StartY, seg1EndX, seg1EndY, '#2D5B5B');
+  drawLine(seg1EndX, seg1EndY, seg2EndX, seg2EndY, '#2D5B5B');
+}
+
+/**
+ * @description Draw a "L" line connecting a major topic box to a minor
+ * topic box
+ * @param {Object} startX Starting X coordinate
+ * @param {Object} startY Starting Y coordinate
+ * @param {Object} endX Ending X coordinate
+ * @param {Object} endY Ending Y coordinate
+ * @param {String} lineColor RGB color string to be used to fill the line
+ */
+function drawLine(startX, startY, endX, endY, lineColor) {
+  const lineWidth = endY === startY ? endX - startX : CONNECTOR_WIDTH;
+  const lineHeight = endY === startY ? CONNECTOR_WIDTH : endY - startY;
+  
   const c = $('<canvas/>').attr({
-    'width': `${LINE_WIDTH}`,
-    'height': endY - startY
+    'width': lineWidth,
+    'height': lineHeight
   }).css({
       'position': 'absolute',
-      'left': `${startX-(LINE_WIDTH/2)}`,
       'top': startY,
-      'width': `'${LINE_WIDTH}px'`,
-      'background-color': '#974B4B',
+      'left': startX,
+      'width': `'${CONNECTOR_WIDTH}px'`,
+      'background-color': `${lineColor}`,
       'border-color': 'black',
       'border-width': 'thin',
       'z-index': -1
   }).appendTo($('body'))[0].getContext('2d');
-  c.strokeStyle = '#FF0000';
-  c.lineWidth = LINE_WIDTH;
+
+  c.strokeStyle = '#ff0000';
+  c.lineWidth = CONNECTOR_WIDTH;
   c.beginPath();
-  c.moveTo(startX-(LINE_WIDTH/2), startY);
-  c.lineTo(endX-(LINE_WIDTH/2), endY);
+  c.moveTo(startX, startY);
+  console.log(`Starting point: (${startX},${startY})`)
+  c.lineTo(endX, endY);
+  console.log(`Ending point:   (${endX},${endY})`)
   c.stroke();
+}
+
+$(document).ready(function() {
+  $( "div .content-box" ).each(function( index, element ) {
+    adjustContainer(`#${$( element ).attr( 'id' )}`);
+  });
+
+  connectMajorTopics($('#about-box .pic'), $('#oss-box .pic'));
+  connectMinorTopic($('#about-box .content-area'), $('#family-box .content-area'));
+  connectMinorTopic($('#about-box .content-area'), $('#chingu-box .content-area'));
+  connectMinorTopic($('#career-box .content-area'), $('#pm-box .content-area'));
+  connectMinorTopic($('#career-box .content-area'), $('#jobhist-box .content-area'));
+  connectMinorTopic($('#career-box .content-area'), $('#pubs-box .content-area'));
+  connectMinorTopic($('#oss-box .content-area'), $('#gitaclue-box .content-area'));
+  connectMinorTopic($('#oss-box .content-area'), $('#devgaido-box .content-area'));
+  connectMinorTopic($('#oss-box .content-area'), $('#ideanebulae-box .content-area'));
+  connectMinorTopic($('#oss-box .content-area'), $('#pam-box .content-area'));
+
 });
