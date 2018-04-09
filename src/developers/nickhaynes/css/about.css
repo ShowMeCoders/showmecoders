@@ -1,0 +1,389 @@
+/* Found this trick (in HTML tag below) to set BG to always cover and stay fixed on CSS Tricks: https://css-tricks.com/perfect-full-page-background-image/  */
+
+
+/* FULL SITE BASIC ITEMS */
+
+body{
+  font-family: Roboto, Tahoma, Verdana, sans-serif;
+  margin: 0px;
+}
+
+/* Oversizing catch-all */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+/* Remove underline from links */
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header & menu */
+
+#header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  background: radial-gradient(#188ff4,#0062c1);
+  color: #ffffff;
+  height: 50px;
+  margin-bottom: 80px;
+  z-index: 999;
+}
+
+.banner {
+  height: 45px;
+  margin: 2px;
+}
+
+.banner img {
+  max-width: 100%;
+  max-height: 90%;
+  margin-top: 2px;
+}
+
+.props {
+  display: none;
+  margin-left: 10px;
+  padding-right:5%;
+  max-width: 30%;
+}
+
+.fullMenu {
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 55px;
+  padding-bottom: 2px;
+  background-color: #0062c1d5;
+  background-image: url("../../assets/CSSTexture1.png");
+  z-index: 888;
+}
+
+.fullMenuLinks {
+  color: #fff;
+  font-size: 13px;
+  padding: 8px;
+}
+
+/* Temp remove Hambugrger MENU
+.hamburgerMenu {
+  position: absolute;
+  left: 85%;
+  height: inherit;
+  list-style: none;
+}
+
+.hamburgerMenu img {
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+.menuButton {
+  height: inherit;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: inherit;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.menuContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999;
+  right: 0;
+}
+
+.menuContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {display: block;}
+
+.navbar {
+  overflow: hidden;
+  padding: 10px;
+}
+
+.navbar a{
+  font-size: 16px;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+*/
+
+
+/* Welcome */
+
+#ourMission {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 200px;
+}
+
+.missionMessage {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  margin-top: 130px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  background-color: #f4564bc9;
+  background-image: url("../../assets/CSSTexture1.png");
+  border-top: 5px solid #a9a9a9;
+  border-bottom: 5px solid #a9a9a9;
+  font-size: 13px;
+}
+
+.welcomeHeader {
+  color: #fff;
+  font-size: 20px;
+  margin: 8px;
+}
+
+/* Original Footer idea from @cbracco https://codepen.io/cbracco/pen/zekgx?q=footer&limit=all&type=type-pens */
+
+.footer {
+  min-height: 10px;
+  max-height: 10px;
+  width: 100%;
+  padding-bottom: 8px;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  background: radial-gradient(#188ff4, #0062c1);
+  z-index: 1;
+}
+
+/* NICK'S SPECIFIC CSS */
+
+html {
+  background: #f6f6f6;
+}
+
+/* Flexbox */
+
+
+.container {
+  padding-top: 89px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  font-family: 'Poppins', 'Roboto', Tahoma, Verdana, sans-serif;
+}
+
+.introHeader {
+  order: 1;
+  width: 100%;
+  align-content: center;
+}
+
+.introMain {
+  order: 2;
+  width: 100%;
+  word-wrap: normal;
+  margin-bottom: 35px;
+}
+
+.about {
+  order: 3;
+  width: 80%;
+  margin-left: 10%;
+  word-wrap: normal;
+  text-align: justify;
+}
+
+.about img{
+  float: left;
+  padding: 0px 15px 15px 0px;
+  width: 20%;
+}
+
+.aboutImg{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.caption {
+  font-size: 10px;
+  font-style: italic;
+  text-align: center;
+}
+
+@media screen and (max-width:800px) {
+  .aboutText {
+    font-size: 14px;
+    text-align: justify;
+}
+}
+
+@media screen and (min-width:801px) {
+  .aboutText {
+    font-size: 1.8vw;
+    text-align: justify;
+  }
+}
+
+.bottom {
+  margin-bottom: 35px;
+}
+
+/* Stylistics */
+
+@media screen and (max-width:800px) {
+  h1 {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+    color: #000;
+  }
+}
+
+@media screen and (min-width:801px) {
+  h1 {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 4.5vw;
+    font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+    color: #000;
+  }
+}
+
+.social {
+  float: right;
+  width: 30px;
+  height: 30px;
+  padding: 5px 10px 5px 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+@media screen and (max-width:800px){
+  .logo {
+    display: inline-block;
+    vertical-align: middle;
+    width:10%;
+    margin-left:45%;
+  }
+}
+
+@media screen and (min-width:801px) {
+  .logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6%;
+    margin-left: 47%;
+}
+}
+
+@media screen and (max-width:800px) {
+  h2 {
+  font-weight: bolder;
+  text-align: center;
+  font-size: 24px;  
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  color: #000;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+}
+
+@media screen and (min-width:801px) {
+  h2 {
+  font-weight: bolder;
+  text-align: center;
+  font-size: 3.5vw;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  color: #000;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  line-height: 0px;
+}
+}
+
+@media screen and (max-width:800px) {
+  h3 {
+  text-align: center;
+  font-weight: 100;
+  vertical-align: bottom;
+  font-size: 20px;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  color: #000;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+}
+
+@media screen and (min-width:801px) {
+  h3 {
+  text-align: center;
+  font-weight: 100;
+  vertical-align: bottom;
+  font-size: 2.25vw;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  color: #000;
+  line-height: 0px;
+  margin-top: 0px;
+}
+}
+
+@media screen and (max-width:800px) {
+  h4 {
+  text-align: center;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+}
+
+@media screen and (min-width:801px) {
+  h4 {
+  text-align: center;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1.5vw;
+  color: #000;
+  margin-bottom: 15px;
+}
+}
