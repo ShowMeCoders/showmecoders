@@ -236,7 +236,7 @@ html {
 .portfolioSmall {
   order: 4;
   width: 100%;
-  background-image: url("../images/portfolioiconsmall.jpg");
+  background-image: url("../images/portfolioIconSmall.jpg");
   background-size: 100%;
   background-position-y: 75%;
   background-color: #0000f7;
