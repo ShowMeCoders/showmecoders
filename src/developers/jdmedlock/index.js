@@ -27,8 +27,9 @@ function adjustContainer(boxId) {
  * @param {Object} startTopic DOM node of the starting topic box
  * @param {Object} endTopic DOM node of the ending topic box
  */
-function connectMajorTopics(startTopic, endTopic) {
-  //const startX = startTopic[0].offsetLeft + (startTopic[0].offsetWidth / 2);
+function connectMajorTopics(startMajor, endMajor) {
+  const startTopic = $( startMajor ).find( '.pic' );
+  const endTopic = $( endMajor ).find( '.pic' );
   const startX = startTopic[0].offsetLeft + (startTopic[0].offsetWidth / 2);
   const startY = startTopic[0].offsetTop + startTopic[0].offsetHeight;
   const endX = endTopic[0].offsetLeft + (endTopic[0].offsetWidth / 2);
@@ -46,14 +47,15 @@ function connectMajorTopics(startTopic, endTopic) {
  */
 function connectMinorTopic(majorTopic, minorTopic) {
   // Calculate vertical line segment start & end points
-  const contentBox = $( majorTopic ).parent( '.content-box' );
-  const seg1StartX = majorTopic[0].offsetLeft + (CONNECTOR_WIDTH * 2);
-  const seg1StartY = contentBox[0].offsetTop + contentBox[0].offsetHeight;
+  const majorContent = $( majorTopic ).find( '.content-area' );
+  const minorContent = $( minorTopic ).find( '.content-area' );
+  const seg1StartX = majorContent[0].offsetLeft + (CONNECTOR_WIDTH * 2);
+  const seg1StartY = majorTopic[0].offsetTop + majorTopic[0].offsetHeight;
   const seg1EndX = seg1StartX;
-  const seg1EndY = minorTopic[0].offsetTop + (minorTopic[0].offsetHeight / 2);
+  const seg1EndY = minorContent[0].offsetTop + (minorContent[0].offsetHeight / 2);
 
   // Calculate horizontal line segment end point
-  const titleWrapper = $( minorTopic ).parent( '.content-box' ).find( '.content-title-wrapper' );
+  const titleWrapper = $( minorTopic ).find( '.content-title-wrapper' );
   const seg2EndX = titleWrapper[0].offsetLeft;
   const seg2EndY = seg1EndY;
 
@@ -103,15 +105,15 @@ $(document).ready(function() {
     adjustContainer( `#${$( element ).attr( 'id' )}` );
   });
 
-  connectMajorTopics($( '#about-box .pic' ), $( '#oss-box .pic' ));
-  connectMinorTopic($( '#about-box .content-area' ), $( '#family-box .content-area' ));
-  connectMinorTopic($( '#about-box .content-area' ), $( '#chingu-box .content-area' ));
-  connectMinorTopic($( '#career-box .content-area' ), $( '#pm-box .content-area' ));
-  connectMinorTopic($( '#career-box .content-area' ), $( '#jobhist-box .content-area' ));
-  connectMinorTopic($( '#career-box .content-area' ), $( '#pubs-box .content-area' ));
-  connectMinorTopic($( '#oss-box .content-area' ), $( '#gitaclue-box .content-area' ));
-  connectMinorTopic($( '#oss-box .content-area' ), $( '#devgaido-box .content-area' ));
-  connectMinorTopic($( '#oss-box .content-area' ), $( '#ideanebulae-box .content-area' ));
-  connectMinorTopic($( '#oss-box .content-area' ), $( '#pam-box .content-area' ));
+  connectMajorTopics($( '#about-box' ), $( '#oss-box' ));
+  connectMinorTopic($( '#about-box' ), $( '#family-box' ));
+  connectMinorTopic($( '#about-box' ), $( '#chingu-box' ));
+  connectMinorTopic($( '#career-box' ), $( '#pm-box' ));
+  connectMinorTopic($( '#career-box' ), $( '#jobhist-box' ));
+  connectMinorTopic($( '#career-box' ), $( '#pubs-box' ));
+  connectMinorTopic($( '#oss-box' ), $( '#gitaclue-box' ));
+  connectMinorTopic($( '#oss-box' ), $( '#devgaido-box' ));
+  connectMinorTopic($( '#oss-box' ), $( '#ideanebulae-box' ));
+  connectMinorTopic($( '#oss-box' ), $( '#pam-box' ));
 
 });
