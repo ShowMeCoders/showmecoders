@@ -8,38 +8,66 @@ a:link {
 /* Content Classes */
 .content-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: flex-start;
   width: 100%;
   height: auto;
   margin: auto auto auto auto;
   padding-top: 100px;
 }
 
+@media screen and (min-width: 768px) {
+  .content-wrapper {
+    width: 80%;
+  }
+}
+
 .major-topics {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: auto 40% auto auto;
-  width: 60%;
+  margin: auto 1% auto 1%;
+  width: 80%;
+}
+
+@media screen and (min-width: 768px) {
+  .major-topics {
+    margin: auto 40% auto auto;
+    width: 60%;
+  }
 }
 
 .minor-topics {
   display: flex;
   flex-wrap: wrap;
-  margin: auto auto auto 40%;
-  width: 70%;
+  margin: auto auto auto 10%;
+  width: 80%;
+}
+
+@media screen and (min-width: 768px) {
+  .minor-topics {
+    align-self: space-between;
+    margin: auto 30% auto 30%;
+    width: 70%;
+  }
 }
 
 .content-box {
   display: flex;
-  align-items: center;
   background-color: #0062c1d5;
   background-image: url("../../../assets/CSSTexture1.png");
-  width: 60%;
+  width: 100%;
   height: auto;
   margin: 20px auto 0 auto;
   margin-left: auto;
   border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .content-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }
 
 .content-title-wrapper {
@@ -85,6 +113,13 @@ a:link {
   object-fit: contain;
 }
 
+@media screen and (max-width: 768px) {
+  .pic {
+    min-width: 25%;
+    max-width: 25%;
+  }
+}
+
 .plain {
   list-style: none;
 }
@@ -92,11 +127,11 @@ a:link {
 .icon-wrapper {
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin: 20px 0 0 0;
   width: 100%;
 }
 
 .icon {
   font-size: 36px;
-  margin: auto 20px 0 auto;
+  margin: 0 0 0 0;
 }
