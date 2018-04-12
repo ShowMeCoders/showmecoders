@@ -103,7 +103,7 @@ a:active {
 /* MAIN CONTENT */
 
 .sectionMargin {
-  margin-top: 120px;
+
 }
 
 #contentBody {
@@ -213,6 +213,7 @@ a:active {
   justify-content: center;
   align-items: center;
   align-content: center;
+  margin-top: 120px;
   width: 100%;
   max-width: 1025px;
   height: auto;
@@ -222,6 +223,7 @@ a:active {
 }
 
 .blueBox {
+  margin-top: 75px;
   width: 100%;
   max-width: 1025px;
   height: auto;
