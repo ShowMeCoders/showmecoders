@@ -1,0 +1,359 @@
+/* Found this trick (in HTML tag below) to set BG to always cover and stay fixed on CSS Tricks: https://css-tricks.com/perfect-full-page-background-image/  */
+
+
+/* FULL SITE BASIC ITEMS */
+
+body{
+  font-family: Roboto, Tahoma, Verdana, sans-serif;
+  margin: 0 0 50px 0;
+}
+
+/* Oversizing catch-all */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+/* Remove underline from links */
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header & menu */
+
+#header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  background: radial-gradient(#188ff4,#0062c1);
+  color: #ffffff;
+  height: 50px;
+  margin-bottom: 80px;
+  z-index: 999;
+}
+
+.banner {
+  height: 45px;
+  margin: 2px;
+}
+
+.banner img {
+  max-width: 100%;
+  max-height: 90%;
+  margin-top: 2px;
+}
+
+.props {
+  display: none;
+  margin-left: 10px;
+  padding-right:5%;
+  max-width: 30%;
+}
+
+.fullMenu {
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 55px;
+  padding-bottom: 2px;
+  background-color: #0062c1d5;
+  background-image: url("../../assets/CSSTexture1.png");
+  z-index: 888;
+}
+
+.fullMenuLinks {
+  color: #fff;
+  font-size: 13px;
+  padding: 8px;
+}
+
+/* Temp remove Hambugrger MENU
+.hamburgerMenu {
+  position: absolute;
+  left: 85%;
+  height: inherit;
+  list-style: none;
+}
+
+.hamburgerMenu img {
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+.menuButton {
+  height: inherit;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: inherit;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.menuContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999;
+  right: 0;
+}
+
+.menuContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {display: block;}
+
+.navbar {
+  overflow: hidden;
+  padding: 10px;
+}
+
+.navbar a{
+  font-size: 16px;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+*/
+
+
+/* Welcome */
+
+#ourMission {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 200px;
+}
+
+.missionMessage {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  margin-top: 130px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  background-color: #f4564bc9;
+  background-image: url("../../assets/CSSTexture1.png");
+  border-top: 5px solid #a9a9a9;
+  border-bottom: 5px solid #a9a9a9;
+  font-size: 13px;
+}
+
+.welcomeHeader {
+  color: #fff;
+  font-size: 20px;
+  margin: 8px;
+}
+
+/* Original Footer idea from @cbracco https://codepen.io/cbracco/pen/zekgx?q=footer&limit=all&type=type-pens */
+
+.footer {
+  min-height: 10px;
+  max-height: 10px;
+  width: 100%;
+  padding-bottom: 8px;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  background: radial-gradient(#188ff4, #0062c1);
+  z-index: 1;
+}
+
+/* NICK'S SPECIFIC CSS */
+
+html {
+  background: #f6f6f6;
+}
+
+/* Flexbox */
+
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: 'Poppins', 'Roboto', Tahoma, Verdana, sans-serif;
+}
+
+.topContainer {
+  order: 1;
+  width: 100%;
+  height: 100vw;
+  background: url("../images/nickBGbig.jpg") no-repeat center center ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;; 
+}
+
+.introHeader {
+  order: 2;
+  width: 100%;
+  align-content: center;
+  padding-top: 89px;
+}
+
+.introMain {
+  order: 3;
+  width: 100%;
+}
+
+.portfolioSmall {
+  display: none;
+}
+
+.portfolioSmall a {
+  display: none;
+}
+
+.aboutNickSmall {
+  display: none;
+}
+
+.aboutNickSmall a {
+  display: none;
+}
+
+.nicksPicksSmall {
+  display: none;
+}
+
+.nicksPicksSmall a {
+  display: none;
+}
+
+.portfolioMed {
+  display: none;
+}
+
+.aboutNickMed {
+  display: none;
+}
+
+.nicksPicksMed {
+  display: none;
+}
+
+.portfolioLarge {
+  order: 4;
+  width: 33.3%;
+}
+
+.portfolioLarge img {
+  width: 85%;  
+  height: auto;
+  padding:15px 0px;
+  margin-left:7.5%;
+  margin-right: 7.5%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.aboutNickLarge {
+  order: 5;
+  width: 33.4%;
+}
+
+.aboutNickLarge img {
+  width: 85%;
+  height: auto;
+  padding:15px 0px;
+  margin-left:7.5%;
+  margin-right: 7.5%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.nicksPicksLarge {
+  order: 6;
+  width: 33.3%;
+}
+
+.nicksPicksLarge img {
+  width: 85%;
+  height: auto;
+  padding:15px 0px;
+  margin-left:7.5%;
+  margin-right: 7.5%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* Stylistics */
+
+h1 {
+  font-weight: bolder;
+  text-align: center;
+  font-size: 4.5vw;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+.social {
+  float: right;
+  width: 30px;
+  height: 30px;
+  padding: 5px 10px 5px 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.logo {
+ display: inline-block;
+ vertical-align: middle;
+ width: 6%;
+ margin-left: 47%;
+}
+
+h2 {
+  font-weight: bolder;
+  text-align: center;
+  font-size: 4.0.5vw;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  color: #000000;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 100;
+  vertical-align: bottom;
+  font-size: 14px;
+  font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+  color: #000000;
+}

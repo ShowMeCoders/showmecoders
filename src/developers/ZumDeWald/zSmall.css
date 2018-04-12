@@ -1,0 +1,297 @@
+
+/*BODY ATTRIBUTE SELECTORS */
+
+body{
+  margin: 0px;
+  max-width: 100%;
+  font-family: Roboto, Tahoma, Verdana, sans-serif;
+  background: url('../../../assets/SMC_BG.png') fixed no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #ffffff;
+}
+
+/* Oversizing catch-all */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+/* Remove underline from links */
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER & MENU */
+
+#header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  background: radial-gradient(#188ff4,#0062c1);
+  color: #ffffff;
+  height: 50px;
+  margin-bottom: 80px;
+  z-index: 999;
+}
+
+.banner {
+  height: 45px;
+  margin: 2px;
+}
+
+.banner img {
+  max-width: 100%;
+  max-height: 90%;
+  margin-top: 2px;
+}
+
+.props {
+  display: none;
+  margin-left: 10px;
+  padding-right:5%;
+  max-width: 30%;
+}
+
+.fullMenu {
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 55px;
+  padding-bottom: 2px;
+  background-color: #0062c1d5;
+  background-image: url("../../../assets/CSSTexture1.png");
+  z-index: 888;
+  color: #ffffff;
+}
+
+.fullMenuLinks {
+  font-size: 15px;
+  padding: 7px;
+}
+
+
+/* MAIN CONTENT */
+
+.sectionMargin {
+  margin-top: 120px;
+}
+
+#contentBody {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 75px;
+}
+
+/* DEV Info */
+
+#flexBodyOne {
+  margin: 0;
+}
+
+#zInfo {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-content: space-around;
+  width: 100%;
+  max-width: 300px;
+}
+
+.devPic {
+  width: 125px;
+  height: 125px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 6px 1px #188ff4;
+}
+
+.connect {
+  text-align: center;
+  font-size: 14px;
+  font-family: Roboto;
+  color: #000;
+  background-color: #fff;
+  box-shadow: 1px 1px 15px #188ff4;
+  padding: 5px;
+  margin: 12px;
+  opacity: 0.8;
+}
+
+.logoBox {
+  width: 200px;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  margin-bottom: 10px;
+}
+
+.logos {
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  margin-bottom: 12px;
+  background-color: #ffffff2f;
+  background-image: url("../../../assets/CSSTexture1.png");
+  box-shadow: 1px 1px 15px #188ff4;
+}
+
+.sideBarItems {
+  display: none;
+}
+
+.randomFactsList {
+  list-style: circle;
+}
+
+.rflItem {
+  padding: 8px;
+}
+
+/* Main Content */
+
+#flexBodyTwo {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.contentBlock {
+  width: 100%;
+}
+
+#familia {
+  width: 100%;
+}
+
+.redBox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  background-color: #ffffffe4;
+  box-shadow: 0 -2px 5px #ff8977;
+}
+
+.blueBox {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  background-color: #ffffffe4;
+  box-shadow: 0 -2px 5px #188ff4;
+}
+
+.boxHeading {
+  width: 100%;
+  margin: 0;
+  padding: 3px 0 3px 0;
+  background-color: #fff;
+  color: #000;
+  border-bottom: 2px solid #fff;
+  background-image: url("../../../assets/CSSTexture1.png");
+}
+
+.contentPic {
+  margin-top: 10px;
+}
+
+.picCaption {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: Roboto;
+  color: #000;
+  background-image: url("../../../assets/CSSTexture1.png");
+  background-color: #ffffff2f;
+}
+
+.content {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: Roboto;
+  color: #000;
+}
+
+#reading {
+  margin-bottom: 600px;
+}
+
+.readingTitle {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 14px;
+  background-image: url("../../../assets/CSSTexture1.png");
+  background-color: #ffffff2f;
+}
+
+
+.books {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-top: 2px solid #000;
+}
+
+.bookPicLink {
+  margin: 12px 12px 12px 10px;
+}
+
+.bookPic {
+  height: 100px;
+  width: auto;
+}
+
+
+/* FOOTER */
+
+.footer {
+  position: fixed;
+  z-index: 1;
+  min-height: 10px;
+  max-height: 10px;
+  width: 100%;
+  padding-top: 3px;
+  padding-bottom: 8px;
+  bottom: 0;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  background: radial-gradient(#188ff4, #0062c1);
+}
+
+
+/* "We are the music-makers, and we are the dreamers of dreams" */

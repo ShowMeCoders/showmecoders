@@ -1,0 +1,315 @@
+
+/*BODY ATTRIBUTE SELECTORS */
+
+body{
+  margin: 0px;
+  max-width: 100%;
+  font-family: Roboto, Tahoma, Verdana, sans-serif;
+  background: url('../../../assets/SMC_BG.png') fixed no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #ffffff;
+}
+
+/* Oversizing catch-all */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+/* Remove underline from links */
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER & MENU */
+
+#header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: radial-gradient(#188ff4,#0062c1);
+  color: #ffffff;
+  z-index: 999;
+  height: 55px;
+  margin-bottom: 80px;
+}
+
+.banner {
+  height: 45px;
+  margin: 2px;
+  max-width: 50%;
+  margin-right: 25px;
+}
+
+.banner img {
+  max-width: 100%;
+  max-height: 90%;
+  margin-top: 2px;
+}
+
+.props {
+  position: absolute;
+  left: 3%;
+  width: 500px;
+}
+
+.fullMenu {
+  position: fixed;
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 55px;
+  padding-bottom: 2px;
+  background-color: #0062c1d5;
+  background-image: url("../../../assets/CSSTexture1.png");
+  z-index: 888;
+  color: #ffffff;
+}
+
+.fullMenuLinks {
+  color: #fff;
+  font-size: 18px;
+  padding: 7px;
+}
+
+.fullMenuLinks:hover {
+  background-color: #f4564bd5;
+  background-image: url("../../assets/CSSTexture1.png")
+}
+
+
+/* MAIN CONTENT */
+
+.sectionMargin {
+
+}
+
+#contentBody {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* DEV Info */
+
+#flexBodyOne {
+  width: 25%;
+  min-width: 250px;
+  height: 100%;
+  margin: 120px 0 50px 25px;
+  padding-bottom: 700px;
+  max-width: 300px;
+  background-color: #ffffffe4;
+}
+
+#zInfo {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+.devPic {
+  width: 125px;
+  height: 125px;
+  margin-top: 50px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 6px 1px #188ff4;
+}
+
+.connect {
+  text-align: center;
+  font-size: 15px;
+  color: #000;
+  background-color: #fff;
+  box-shadow: 1px 1px 15px #188ff4;
+  padding: 8px;
+  margin: 20px;
+  opacity: 0.8;
+}
+
+.logoBox {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 220px;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+}
+
+.logos {
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  margin-bottom: 12px;
+  background-color: #ffffff2f;
+  background-image: url("../../../assets/CSSTexture1.png");
+  box-shadow: 1px 1px 15px #188ff4;
+}
+
+.sideBarItems {
+  margin: 0;
+}
+
+.randomFactsList {
+  list-style: circle;
+  border-top: 2px solid #000;
+}
+
+.rflItem {
+  padding: 8px;
+  margin-top: 2px;
+  border-bottom: 1px dotted #000;
+}
+
+/* Main Content */
+
+#flexBodyTwo {
+  width: 75%;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.contentBlock {
+  width: 100%;
+}
+
+#familia {
+  width: 100%;
+}
+
+.redBox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 120px;
+  width: 100%;
+  max-width: 1025px;
+  height: auto;
+  padding-bottom: 10px;
+  background-color: #ffffffe4;
+  box-shadow: 2px -1px 8px #ff8977;
+}
+
+.blueBox {
+  margin-top: 75px;
+  width: 100%;
+  max-width: 1025px;
+  height: auto;
+  padding-bottom: 10px;
+  background-color: #ffffffe4;
+  box-shadow: 2px -1px 8px #188ff4;
+}
+
+.boxHeading {
+  width: 100%;
+  margin: 0;
+  padding: 3px 0 3px 0;
+  background-color: #fff;
+  color: #000;
+  border-bottom: 2px solid #fff;
+  background-image: url("../../../assets/CSSTexture1.png");
+}
+
+.contentPic {
+  margin-top: 10px;
+}
+
+.picCaption {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #000;
+  background-image: url("../../../assets/CSSTexture1.png");
+  background-color: #ffffff2f;
+}
+
+.content {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 15px;
+  font-family: Roboto;
+  color: #000;
+}
+
+#reading {
+  width: 100%;
+}
+
+.readingTitle {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 14px;
+  background-image: url("../../../assets/CSSTexture1.png");
+  background-color: #ffffff2f;
+}
+
+.books {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-top: 2px solid #000;
+}
+
+.bookPicLink {
+  margin: 12px 15px 12px 8px;
+}
+
+.bookPic {
+  height: 140px;
+  width: auto;
+}
+
+
+/* FOOTER */
+
+.footer {
+  position: fixed;
+  z-index: 1;
+  min-height: 10px;
+  max-height: 10px;
+  width: 100%;
+  padding-top: 3px;
+  padding-bottom: 8px;
+  bottom: 0;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  background: radial-gradient(#188ff4, #0062c1);
+}
+
+
+/* "We are the music-makers, and we are the dreamers of dreams" */
