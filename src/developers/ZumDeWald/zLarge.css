@@ -5,10 +5,8 @@ body{
   margin: 0px;
   max-width: 100%;
   font-family: Roboto, Tahoma, Verdana, sans-serif;
-  background: url('../../../assets/SMC_BG.png') fixed no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: #ffffff;
+  background-color: #fff;
+  background-image:  url('imgs/creampix.png');
 }
 
 /* Oversizing catch-all */
@@ -83,7 +81,7 @@ a:active {
   padding-top: 55px;
   padding-bottom: 2px;
   background-color: #0062c1d5;
-  background-image: url("../../../assets/CSSTexture1.png");
+  background-image: url("imgs/diagstripes.png");
   z-index: 888;
   color: #ffffff;
 }
@@ -96,7 +94,7 @@ a:active {
 
 .fullMenuLinks:hover {
   background-color: #f4564bd5;
-  background-image: url("../../assets/CSSTexture1.png")
+  background-image: url("imgs/diagstripes.png")
 }
 
 
@@ -123,7 +121,8 @@ a:active {
   margin: 120px 0 50px 25px;
   padding-bottom: 700px;
   max-width: 300px;
-  background-color: #ffffffe4;
+  background-color: #fff;
+  box-shadow: 1px 2px 8px #000000c3;
 }
 
 #zInfo {
@@ -167,13 +166,19 @@ a:active {
 }
 
 .logos {
+  cursor: ne-resize;
   width: 30px;
   height: 30px;
   padding: 10px;
   margin-bottom: 12px;
-  background-color: #ffffff2f;
-  background-image: url("../../../assets/CSSTexture1.png");
+  background-color: #fff;
+  background-image: url("imgs/creampix.png");
   box-shadow: 1px 1px 15px #188ff4;
+  transition: 0.5s ease;
+}
+
+.logos:hover {
+  background-color: #0000001b;
 }
 
 .sideBarItems {
@@ -218,8 +223,8 @@ a:active {
   max-width: 1025px;
   height: auto;
   padding-bottom: 10px;
-  background-color: #ffffffe4;
-  box-shadow: 2px -1px 8px #ff8977;
+  background-color: #fff;
+  box-shadow: 1px 2px 8px #ff8977;
 }
 
 .blueBox {
@@ -228,39 +233,42 @@ a:active {
   max-width: 1025px;
   height: auto;
   padding-bottom: 10px;
-  background-color: #ffffffe4;
-  box-shadow: 2px -1px 8px #188ff4;
+  background-color: #fff;
+  box-shadow: 1px 2px 8px #188ff4;
 }
 
 .boxHeading {
   width: 100%;
   margin: 0;
-  padding: 3px 0 3px 0;
-  background-color: #fff;
+  padding: 6px 0 6px 0;
+  font-size: 18px;
   color: #000;
-  border-bottom: 2px solid #fff;
-  background-image: url("../../../assets/CSSTexture1.png");
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+  background-image: url("imgs/creampix.png");
 }
 
 .contentPic {
-  margin-top: 10px;
+  margin: 20px;
 }
 
 .picCaption {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
-  background-image: url("../../../assets/CSSTexture1.png");
-  background-color: #ffffff2f;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background-image: url("imgs/creampix.png");
+  background-color: #fff;
 }
 
 .content {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
-  font-size: 15px;
+  font-size: 16px;
   font-family: Roboto;
   color: #000;
 }
@@ -269,19 +277,11 @@ a:active {
   width: 100%;
 }
 
-.readingTitle {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  font-size: 14px;
-  background-image: url("../../../assets/CSSTexture1.png");
-  background-color: #ffffff2f;
-}
-
 .books {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 .bookPicLink {
@@ -289,6 +289,7 @@ a:active {
 }
 
 .bookPic {
+  cursor: ne-resize;
   height: 140px;
   width: auto;
 }

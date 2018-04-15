@@ -5,10 +5,8 @@ body{
   margin: 0px;
   max-width: 100%;
   font-family: Roboto, Tahoma, Verdana, sans-serif;
-  background: url('../../../assets/SMC_BG.png') fixed no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: #ffffff;
+  background-color: #fff;
+  background-image:  url('imgs/creampix.png');
 }
 
 /* Oversizing catch-all */
@@ -82,7 +80,7 @@ a:active {
   padding-top: 55px;
   padding-bottom: 2px;
   background-color: #0062c1d5;
-  background-image: url("../../../assets/CSSTexture1.png");
+  background-image: url("imgs/diagstripes.png");
   z-index: 888;
   color: #ffffff;
 }
@@ -155,8 +153,8 @@ a:active {
   height: 30px;
   padding: 8px;
   margin-bottom: 12px;
-  background-color: #ffffff2f;
-  background-image: url("../../../assets/CSSTexture1.png");
+  background-color: #fff;
+  background-image: url("imgs/creampix.png");
   box-shadow: 1px 1px 15px #188ff4;
 }
 
@@ -198,7 +196,7 @@ a:active {
   height: auto;
   padding-bottom: 10px;
   margin-bottom: 25px;
-  background-color: #ffffffe4;
+  background-color: #fff;
   box-shadow: 0 -2px 5px #ff8977;
 }
 
@@ -208,7 +206,7 @@ a:active {
   height: auto;
   padding-bottom: 10px;
   margin-bottom: 25px;
-  background-color: #ffffffe4;
+  background-color: #fff;
   box-shadow: 0 -2px 5px #188ff4;
 }
 
@@ -216,14 +214,15 @@ a:active {
   width: 100%;
   margin: 0;
   padding: 3px 0 3px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #000;
   background-color: #fff;
   color: #000;
-  border-bottom: 2px solid #fff;
-  background-image: url("../../../assets/CSSTexture1.png");
+  background-image: url("imgs/creampix.png");
 }
 
 .contentPic {
-  margin-top: 10px;
+  margin: 12px;
 }
 
 .picCaption {
@@ -231,18 +230,18 @@ a:active {
   padding: 10px;
   margin-top: 5px;
   font-size: 14px;
-  font-family: Roboto;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   color: #000;
-  background-image: url("../../../assets/CSSTexture1.png");
-  background-color: #ffffff2f;
+  background-color: #fff;
+  background-image: url("imgs/creampix.png");
 }
 
 .content {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-top: 5px;
   font-size: 14px;
-  font-family: Roboto;
   color: #000;
 }
 
@@ -250,20 +249,12 @@ a:active {
   margin-bottom: 600px;
 }
 
-.readingTitle {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  font-size: 14px;
-  background-image: url("../../../assets/CSSTexture1.png");
-  background-color: #ffffff2f;
-}
-
 
 .books {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 .bookPicLink {
