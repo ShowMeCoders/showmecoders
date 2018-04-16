@@ -107,7 +107,7 @@ a:active {
 #contentBody {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
   width: 100%;
 }
@@ -118,7 +118,7 @@ a:active {
   width: 25%;
   min-width: 250px;
   height: 100%;
-  margin: 120px 0 50px 25px;
+  margin: 120px 20px 50px 20px;
   padding-bottom: 700px;
   max-width: 300px;
   background-color: #fff;
@@ -152,7 +152,6 @@ a:active {
   box-shadow: 1px 1px 15px #188ff4;
   padding: 8px;
   margin: 20px;
-  opacity: 0.8;
 }
 
 .logoBox {
@@ -200,12 +199,7 @@ a:active {
 
 #flexBodyTwo {
   width: 75%;
-  margin-left: 25px;
-  margin-right: 25px;
-}
-
-.contentBlock {
-  width: 100%;
+  margin-right: 20px;
 }
 
 
@@ -252,7 +246,7 @@ a:active {
 }
 
 .contentPic {
-  margin: 20px;
+  margin: 20px 0 20px 0;
 }
 
 .picCaption {
@@ -272,30 +266,29 @@ a:active {
   padding: 10px;
   margin-top: 5px;
   font-size: 16px;
-  font-family: Roboto;
   color: #000;
 }
 
 
 /* SlideShow */
 
-
-/*  COMMENT UNTIL WORKING
 #slides {
   width: 100%;
-  margin-top: 80px;
+  height: auto;
 }
 
  {box-sizing: border-box;}
 
 .slideshow {
-  max-width: 1000px;
+  width: 50%;
+  max-width: 1025px;
   position: relative;
-  margin: auto;
+  margin: 20px 0 20px 0;
 }
 
 .slides {
   display: none;
+  max-width: 400px;
 }
 
 .slidePic {
@@ -310,6 +303,7 @@ a:active {
   margin-top: -22px;
   padding: 16px;
   color: #fff;
+  background-color: rgba(0,0,0,0.2);
   font-weight: bold;
   font-size: 18px;
   transition: 0.5s ease;
@@ -326,19 +320,21 @@ a:active {
 }
 
 .slideCaption {
+  width: 100%;
+  position: absolute;
+  text-align: center;
   color: #f2f2f2;
   font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
+  padding: 0 0 20px 0;
   bottom: 8px;
-  width: 100%;
-  text-align:center;
+  background-color: rgba(0,0,0,0.7);
 }
 
 .slideNumber {
   color: #f2f2f2;
+  background-color: rgba(0,0,0,0.2);
   font-size: 12px;
-  padding: 8px 12px;
+  padding: 12px 12px;
   position: absolute;
   top: 0;
 }
@@ -348,7 +344,6 @@ a:active {
 }
 
 .dot {
-  cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -358,7 +353,7 @@ a:active {
   transition: background-color 0.5s ease;
 }
 
-.active, .dot:hover {
+.active {
   background-color: #717171;
 }
 
@@ -379,7 +374,6 @@ a:active {
   to {opacity: 1}
 }
 
-*/
 
 /* Books */
 

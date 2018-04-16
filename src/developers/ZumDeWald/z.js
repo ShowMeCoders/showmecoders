@@ -26,36 +26,34 @@ const bookPic = $("img.bookPic");
 
 
 //SlideShow Build Components
-/*  COMMENT UNTIL WORKING
 var slideIndex = 1;
 showSlides(slideIndex);
 
-//Next/Prev controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// Next/previous controls
+const prev = $("a.prev");
+const next = $("a.next");
+prev.click((n) => showSlides(slideIndex += -1));
+next.click((n) => showSlides(slideIndex += 1));
 
-//Thumbnail Image control
+// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-function showSlides (n) {
+function showSlides(n) {
   var i;
-  var slides = $("div.slides");
-  var dots = $("span.dot");
+  var slides = document.getElementsByClassName("slides");
+  var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
-  for (i=0; 1 < slides.length; i++) {
-    slides.css({"display": "none"});
-    //slides[i].style.display = "none";
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
   }
-  for (i=0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-*/
 
 });
