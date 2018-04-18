@@ -259,7 +259,7 @@ a:active {
  {box-sizing: border-box;}
 
 .slideshow {
-  max-width: 400px;
+  width: 100%;
   position: relative;
   margin: auto;
 }
