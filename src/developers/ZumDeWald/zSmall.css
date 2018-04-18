@@ -181,6 +181,8 @@ a:active {
   width: 100%;
 }
 
+/* Fam */
+
 #familia {
   width: 100%;
 }
@@ -244,6 +246,110 @@ a:active {
   font-size: 14px;
   color: #000;
 }
+
+/* SlideShow */
+
+#slides {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding: 15px 0 15px 0;
+}
+
+ {box-sizing: border-box;}
+
+.slideshow {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slides {
+  display: none;
+}
+
+.slidePic {
+  width: 100%;
+}
+
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.5s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.slideCaption {
+  width: 100%;
+  position: absolute;
+  text-align:center;
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 0 0 20px 0;
+  bottom: 8px;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.slideNumber {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 12px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dotAlign {
+  text-align:center;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Books */
 
 #reading {
   margin-bottom: 600px;
