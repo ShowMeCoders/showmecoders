@@ -154,6 +154,10 @@ a:active {
   margin: 22px;
 }
 
+.bottomMargin {
+  margin-bottom: 40px;
+}
+
 .logoBox {
   display: flex;
   justify-content: space-around;
